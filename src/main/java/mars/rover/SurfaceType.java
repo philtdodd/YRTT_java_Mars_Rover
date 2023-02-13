@@ -9,6 +9,6 @@ enum SurfaceType {
     BOULDERS;
 
     public String getSurfaceName() {
-         return this.toString().toLowerCase();
+        return this.toString().toLowerCase();
     }
 }
