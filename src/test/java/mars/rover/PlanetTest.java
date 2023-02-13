@@ -6,23 +6,30 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PlanetTest {
     @Test
-    void planetTestName() {
+    void TestName() {
         Planet mars = new Planet("Mars", 227940000L);
 
         assertEquals("Mars", mars.getName());
     }
 
     @Test
-    void planetTestDisstance() {
+    void TestDisstance() {
         Planet mars = new Planet("Mars", 227940000L);
 
         assertEquals(227940000L, mars.getDistanceFromSun());
     }
 
     @Test
-    void planetGetSendCommand() {
+    void GetSendEmptyCommand() {
         Planet mars = new Planet("Mars", 227940000L);
 
         assertEquals("Error no command", mars.receivedCommand(""));
+    }
+
+    @Test
+    void GetSendNullCommand() {
+        Planet mars = new Planet("Mars", 227940000L);
+
+        assertEquals("Error no command", mars.receivedCommand(null));
     }
 }
