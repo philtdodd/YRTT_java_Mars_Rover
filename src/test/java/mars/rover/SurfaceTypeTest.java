@@ -1,6 +1,5 @@
 package mars.rover;
 
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 
@@ -11,6 +10,6 @@ class SurfaceTypeTest {
     @ParameterizedTest
     @EnumSource(value = SurfaceType.class)
     void getSurfaceHard(SurfaceType surface) {
-        assertEquals(surface.toString().toLowerCase(), surface.getSurface());
+        assertEquals(surface.toString().toLowerCase(), surface.getSurfaceName());
     }
 }

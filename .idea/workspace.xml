@@ -64,7 +64,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.mars.rover in YRTT_Jsava_Mars_Rover">
+  <component name="RunManager" selected="JUnit.SurfaceTypeTest">
     <configuration name="SurfaceTypeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="YRTT_Jsava_Mars_Rover" />
       <extension name="coverage">
@@ -112,8 +112,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SurfaceTypeTest.getSurfaceHard" />
         <item itemvalue="JUnit.SurfaceTypeTest" />
+        <item itemvalue="JUnit.SurfaceTypeTest.getSurfaceHard" />
       </list>
     </recent_temporary>
   </component>
