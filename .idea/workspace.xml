@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/mars/rover/GridReference.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/mars/rover/GridReferenceTest.java" afterDir="false" />
+    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="Added and Tested Grid Reference basic class with getters and setters">
+      <change afterPath="$PROJECT_DIR$/src/main/java/mars/rover/GridSquare.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mars/rover/SurfaceType.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -87,6 +87,14 @@
       <option name="presentableId" value="Default" />
       <updated>1676270534650</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added and Tested Grid Reference basic class with getters and setters">
+      <created>1676273930218</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676273930218</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -99,5 +107,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added and Tested Grid Reference basic class with getters and setters" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added and Tested Grid Reference basic class with getters and setters" />
   </component>
 </project>
