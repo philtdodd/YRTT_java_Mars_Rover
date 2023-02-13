@@ -18,4 +18,11 @@ class PlanetTest {
 
         assertEquals(227940000L, mars.getDistanceFromSun());
     }
+
+    @Test
+    void planetGetSendCommand() {
+        Planet mars = new Planet("Mars", 227940000L);
+
+        assertEquals();
+    }
 }
