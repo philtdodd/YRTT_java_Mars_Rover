@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="Added and Tested Grid Reference basic class with getters and setters">
-      <change afterPath="$PROJECT_DIR$/src/main/java/mars/rover/GridSquare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mars/rover/SurfaceType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/GridSquare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/GridSquare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/SurfaceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/SurfaceType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mars/rover/SurfaceTypeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mars/rover/SurfaceTypeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -62,7 +64,38 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.mars.rover in YRTT_Jsava_Mars_Rover">
+    <configuration name="SurfaceTypeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="YRTT_Jsava_Mars_Rover" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mars.rover.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mars.rover" />
+      <option name="MAIN_CLASS_NAME" value="mars.rover.SurfaceTypeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SurfaceTypeTest.getSurfaceHard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="YRTT_Jsava_Mars_Rover" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mars.rover.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mars.rover" />
+      <option name="MAIN_CLASS_NAME" value="mars.rover.SurfaceTypeTest" />
+      <option name="METHOD_NAME" value="getSurfaceHard(mars.rover.SurfaceType)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="mars.rover in YRTT_Jsava_Mars_Rover" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="YRTT_Jsava_Mars_Rover" />
       <extension name="coverage">
@@ -77,6 +110,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SurfaceTypeTest.getSurfaceHard" />
+        <item itemvalue="JUnit.SurfaceTypeTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

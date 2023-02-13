@@ -11,17 +11,19 @@ enum SurfaceType {
     public String getSurface() {
         switch (this) {
             case HARD:
-                return "Hard";
+                return "hard";
             case LIQUID:
-                return "Liquid";
+                return "liquid";
             case SAND:
-                return "Sand";
+                return "sand";
             case GRAVEL:
-                return "Gravel";
+                return "gravel";
             case ROCKS:
-                return "Rocks";
+                return "rocks";
             case BOULDERS:
-                return "Boulders";
+                return "boulders";
         }
+
+        return "Error";
     }
 }
