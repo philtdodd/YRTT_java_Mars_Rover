@@ -23,6 +23,6 @@ class PlanetTest {
     void planetGetSendCommand() {
         Planet mars = new Planet("Mars", 227940000L);
 
-        assertEquals();
+        assertEquals("Error no command", mars.receivedCommand(""));
     }
 }

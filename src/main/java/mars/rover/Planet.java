@@ -17,4 +17,14 @@ public class Planet {
     public Long getDistanceFromSun() {
         return distanceFromSun;
     }
+
+
+    public String receivedCommand(String receivedCommand) {
+        String commandResult = "";
+
+        if (receivedCommand == null || receivedCommand.matches(""))
+            return "Error no command";
+
+        return commandResult;
+    }
 }
