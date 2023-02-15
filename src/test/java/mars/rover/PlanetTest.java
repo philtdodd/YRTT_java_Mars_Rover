@@ -32,4 +32,20 @@ class PlanetTest {
 
         assertEquals("Error no command", mars.receivedCommand(null));
     }
+
+    @Test
+    void GetSendInvalidSurfaceCommand() {
+        Planet mars = new Planet("Mars", 227940000L);
+
+        assertEquals("Error for command not Surface", mars.receivedCommand(" AS "));
+    }
+
+    @Test
+    void GetSendValidSurfaceCommand() {
+        Planet mars = new Planet("Mars", 227940000L);
+
+        assertEquals("Surface Initialized", mars.receivedCommand(" 123 123"));
+        assertEquals(123, mars.planetSurface.getXSize());
+        assertEquals(123, mars.planetSurface.getYSize());
+    }
 }

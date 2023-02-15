@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="Added and Tested Grid Reference basic class with getters and setters">
-      <change afterPath="$PROJECT_DIR$/src/test/java/mars/rover/GridSquareTest.java" afterDir="false" />
+    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="Added and Tested to validate the first command to setup the surface">
+      <change afterPath="$PROJECT_DIR$/src/main/java/mars/rover/PlanetSurface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/GridSquare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/GridSquare.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/SurfaceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/SurfaceType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/Planet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/Planet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/UML/Mars Rover Class Diagram.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mars/rover/PlanetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mars/rover/PlanetTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -42,16 +44,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "settings.editor.selected.configurable": "copyright"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -64,9 +66,9 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GridSquareTest">
-    <configuration name="GridSquareTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="YRTT_Jsava_Mars_Rover" />
+  <component name="RunManager" selected="JUnit.PlanetTest.GetSendValidSurfaceCommand">
+    <configuration name="GridSquareTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="YRTT_Java_Mars_Rover" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="mars.rover.*" />
@@ -80,8 +82,72 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GridSquareTest.getSurfaceTypeFullConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="YRTT_Java_Mars_Rover" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mars.rover.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mars.rover" />
+      <option name="MAIN_CLASS_NAME" value="mars.rover.GridSquareTest" />
+      <option name="METHOD_NAME" value="getSurfaceTypeFullConstructor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlanetTest.GetSendInvalidSurfaceCommand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="YRTT_Java_Mars_Rover" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mars.rover.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mars.rover" />
+      <option name="MAIN_CLASS_NAME" value="mars.rover.PlanetTest" />
+      <option name="METHOD_NAME" value="GetSendInvalidSurfaceCommand" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlanetTest.GetSendNullCommand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="YRTT_Java_Mars_Rover" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mars.rover.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mars.rover" />
+      <option name="MAIN_CLASS_NAME" value="mars.rover.PlanetTest" />
+      <option name="METHOD_NAME" value="GetSendNullCommand" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlanetTest.GetSendValidSurfaceCommand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="YRTT_Java_Mars_Rover" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mars.rover.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mars.rover" />
+      <option name="MAIN_CLASS_NAME" value="mars.rover.PlanetTest" />
+      <option name="METHOD_NAME" value="GetSendValidSurfaceCommand" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SurfaceTypeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="YRTT_Jsava_Mars_Rover" />
+      <module name="YRTT_Java_Mars_Rover" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="mars.rover.*" />
@@ -95,24 +161,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SurfaceTypeTest.getSurfaceHard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="YRTT_Jsava_Mars_Rover" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mars.rover.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="mars.rover" />
-      <option name="MAIN_CLASS_NAME" value="mars.rover.SurfaceTypeTest" />
-      <option name="METHOD_NAME" value="getSurfaceHard(mars.rover.SurfaceType)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="mars.rover in YRTT_Jsava_Mars_Rover" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
-      <module name="YRTT_Jsava_Mars_Rover" />
+      <module name="YRTT_Java_Mars_Rover" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="mars.rover.*" />
@@ -127,9 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GridSquareTest" />
+        <item itemvalue="JUnit.PlanetTest.GetSendValidSurfaceCommand" />
+        <item itemvalue="JUnit.PlanetTest.GetSendInvalidSurfaceCommand" />
+        <item itemvalue="JUnit.PlanetTest.GetSendNullCommand" />
+        <item itemvalue="JUnit.GridSquareTest.getSurfaceTypeFullConstructor" />
         <item itemvalue="JUnit.SurfaceTypeTest" />
-        <item itemvalue="JUnit.SurfaceTypeTest.getSurfaceHard" />
       </list>
     </recent_temporary>
   </component>
@@ -165,6 +217,23 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added and Tested Grid Reference basic class with getters and setters" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added and Tested Grid Reference basic class with getters and setters" />
+    <MESSAGE value="Added and Tested to validate the first command to setup the surface" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added and Tested to validate the first command to setup the surface" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/mars/rover/GridSquareTest.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/YRTT_Jsava_Mars_Rover$GridSquareTest_getSurfaceTypeFullConstructor.ic" NAME="GridSquareTest.getSurfaceTypeFullConstructor Coverage Results" MODIFIED="1676291833894" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>mars.rover.*</FILTER>
+    </SUITE>
   </component>
 </project>

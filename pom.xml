@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>YRTT_Jsava_Mars_Rover</artifactId>
+    <artifactId>YRTT_Java_Mars_Rover</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
