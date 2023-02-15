@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="PlanetSurface  created and checked Tests Passed">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="Refactored the create surface process">
       <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/Planet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/Planet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mars/rover/PlanetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mars/rover/PlanetTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676503464495</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Refactored the create surface process">
+      <created>1676504219968</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1676504219968</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -223,7 +230,9 @@
     <MESSAGE value="Added and Tested to validate the first command to setup the surface" />
     <MESSAGE value="PlanetSurface not created" />
     <MESSAGE value="PlanetSurface  created and checked Tests Passed" />
-    <option name="LAST_COMMIT_MESSAGE" value="PlanetSurface  created and checked Tests Passed" />
+    <MESSAGE value="Refactored the create curface process" />
+    <MESSAGE value="Refactored the create surface process" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored the create surface process" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
