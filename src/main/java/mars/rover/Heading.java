@@ -5,7 +5,7 @@ public class Heading implements Direction {
     public static final Integer NORTH = 0;
     public static final Integer EAST = 90;
     public static final Integer SOUTH = 180;
-    public static final Integer WEST = 180;
+    public static final Integer WEST = 270;
 
     public Heading(Integer heading) {
         this.heading = heading;
