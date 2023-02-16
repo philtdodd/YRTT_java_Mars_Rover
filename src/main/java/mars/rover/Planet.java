@@ -60,6 +60,32 @@ public class Planet {
         }
     }
 
+    private String runTimeCommand(String receivedCommand) {
+        if (!receivedCommand.matches("[ ]*(([LRM]*)[ ]*)*[ ]*"))
+            return "Error command not rover landing command";
+        else {
+            int x, y;
+            String heading;
+            String commandTidied = receivedCommand.replaceAll(" ", "");
+
+            for (Integer i; i < commandTidied.length(); i++) {
+                switch (commandTidied.substring(i, i + 1)) {
+                    case "L":
+                        selectedVehicle.rotateLeft();
+                        break;
+                    case "R":
+                        selectedVehicle.rotateRight();
+                        break;
+                    case "M":
+                        selectedVehicle.move();
+                        break;
+                }
+            }
+
+            return selectedVehicle.getLocation();
+        }
+    }
+
     public String receivedCommand(String receivedCommand) {
         String commandResult = "pass through";
         receivedCommands++;
@@ -89,8 +115,8 @@ public class Planet {
             }
         }
 
-//        if (receivedCommands > 2)
-//            commandResult = runTimeCommand(receivedCommand);
+        if (receivedCommands > 2)
+            commandResult = runTimeCommand(receivedCommand);
 
         return commandResult;
     }
