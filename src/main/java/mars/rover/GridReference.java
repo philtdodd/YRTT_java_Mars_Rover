@@ -30,36 +30,36 @@ public class GridReference {
         this.y = y;
     }
 
-    protected GridReference peekMove(Integer xMax, Integer yMax, Heading heading) {
-        Integer newX = x;
-        Integer newY = y;
-
-        if (heading.getHeading() == Heading.NORTH)
-            newY++;
-        else if (heading.getHeading() == Heading.EAST)
-            newX++;
-        else if (heading.getHeading() == Heading.SOUTH)
-            newY--;
-        else if (heading.getHeading() == Heading.WEST)
-            newX--;
-        else
-            return (new GridReference(x, y));
-
-        if (newX == -1)
-            newX = xMax;
-        else if (newX == xMax)
-            newX = 0;
-
-        if (newY == -1) {
-            newY = yMax;
-            heading.rotateLeft();
-            heading.rotateLeft();
-        } else if (newY == yMax) {
-            newY = 0;
-            heading.rotateLeft();
-            heading.rotateLeft();
-        }
-
-        return (new GridReference(newX, newY));
-    }
+//    protected GridReference peekMove(Integer xMax, Integer yMax, Heading heading) {
+//        Integer newX = x;
+//        Integer newY = y;
+//
+//        if (heading.getHeading() == Heading.NORTH)
+//            newY++;
+//        else if (heading.getHeading() == Heading.EAST)
+//            newX++;
+//        else if (heading.getHeading() == Heading.SOUTH)
+//            newY--;
+//        else if (heading.getHeading() == Heading.WEST)
+//            newX--;
+//        else
+//            return (new GridReference(x, y));
+//
+//        if (newX == -1)
+//            newX = xMax;
+//        else if (newX == xMax)
+//            newX = 0;
+//
+//        if (newY == -1) {
+//            newY = yMax;
+//            heading.rotateLeft();
+//            heading.rotateLeft();
+//        } else if (newY == yMax) {
+//            newY = 0;
+//            heading.rotateLeft();
+//            heading.rotateLeft();
+//        }
+//
+//        return (new GridReference(newX, newY));
+//    }
 }

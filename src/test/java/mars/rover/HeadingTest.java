@@ -8,58 +8,58 @@ class HeadingTest {
 
     @Test
     void getHeading() {
-        Heading heading = new Heading(90);
+        Heading heading = new Heading(Compass.NORTH);
 
-        assertEquals(Heading.EAST, heading.getHeading());
+        assertEquals("north", heading.getHeadingName());
     }
 
     @Test
     void getHeadingName() {
-        Heading heading = new Heading(180);
+        Heading heading = new Heading(Compass.SOUTH);
 
         assertEquals("south", heading.getHeadingName());
     }
 
     @Test
     void getHeadingLetter() {
-        Heading heading = new Heading(270);
+        Heading heading = new Heading(Compass.WEST);
 
         assertEquals("W", heading.getHeadingLetter());
     }
 
     @Test
     void rotateLeft() {
-        Heading heading = new Heading(90);
+        Heading heading = new Heading(Compass.EAST);
 
         heading.rotateLeft();
 
-        assertEquals(Heading.NORTH, heading.getHeading());
+        assertEquals(Compass.NORTH, heading.getHeading());
     }
 
     @Test
     void rotateLeftRound() {
-        Heading heading = new Heading(0);
+        Heading heading = new Heading(Compass.NORTH);
 
         heading.rotateLeft();
 
-        assertEquals(Heading.WEST, heading.getHeading());
+        assertEquals(Compass.WEST, heading.getHeading());
     }
 
     @Test
     void rotateRight() {
-        Heading heading = new Heading(90);
+        Heading heading = new Heading(Compass.EAST);
 
         heading.rotateRight();
 
-        assertEquals(Heading.SOUTH, heading.getHeading());
+        assertEquals(Compass.SOUTH, heading.getHeading());
     }
 
     @Test
     void rotateRightRound() {
-        Heading heading = new Heading(270);
+        Heading heading = new Heading(Compass.WEST);
 
         heading.rotateRight();
 
-        assertEquals(Heading.NORTH, heading.getHeading());
+        assertEquals(Compass.NORTH, heading.getHeading());
     }
 }

@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="Added Compase enum Tests Fail">
+    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="Compass enum Tests Refactor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/Compass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/Compass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mars/rover/CompassTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mars/rover/CompassTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/GridReference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/GridReference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/Heading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/Heading.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mars/rover/HeadingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mars/rover/HeadingTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,7 +273,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676528516746</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Compass enum Tests Passed">
+      <created>1676528848881</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1676528848881</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Compass enum Tests Refactor">
+      <created>1676528938541</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1676528938541</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -301,7 +317,9 @@
     <MESSAGE value="Added  Heasding - failed tests" />
     <MESSAGE value="Added  Heasding -  tests pass=ed" />
     <MESSAGE value="Added Compase enum Tests Fail" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Compase enum Tests Fail" />
+    <MESSAGE value="Compass enum Tests Passed" />
+    <MESSAGE value="Compass enum Tests Refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Compass enum Tests Refactor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

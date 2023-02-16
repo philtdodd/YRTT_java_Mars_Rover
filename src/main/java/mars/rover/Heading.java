@@ -1,46 +1,42 @@
 package mars.rover;
 
-public class Heading implements Direction {
-    Integer heading;
-    public static final Integer NORTH = 0;
-    public static final Integer EAST = 90;
-    public static final Integer SOUTH = 180;
-    public static final Integer WEST = 270;
+public class Heading extends GridReference {
+    private Compass heading;
 
-    public Heading(Integer heading) {
+    public Heading(Compass heading) {
+        this.heading = heading;
+        super.setX(0);
+        super.setY(0);
+    }
+
+    public Heading(Integer x, Integer y, Compass heading) {
+        super(x, y);
         this.heading = heading;
     }
 
-    @Override
     public Integer getHeading() {
-        return heading;
+        return heading.degrees;
     }
 
     public void rotateLeft() {
-        if (heading != 0)
-            heading -= 90;
+        if (heading.degrees != 0)
+            heading = Compass.valueOfCompass(heading.degrees - 90);
         else
-            heading = 270;
+            heading = Compass.WEST;
     }
 
     public void rotateRight() {
-        if (heading != 270)
-            heading += 90;
+        if (heading.degrees != 270)
+            heading = Compass.valueOfCompass(heading.degrees + 90);
         else
-            heading = 0;
+            heading = Compass.NORTH;
     }
 
     public String getHeadingName() {
-        return switch (this.heading) {
-            case 0 -> "north";
-            case 90 -> "east";
-            case 180 -> "south";
-            case 270 -> "west";
-            default -> "Error";
-        };
+        return heading.name;
     }
 
     public String getHeadingLetter() {
-        return getHeadingName().toUpperCase().substring(0, 1);
+        return heading.letter;
     }
 }

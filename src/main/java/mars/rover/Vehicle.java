@@ -17,9 +17,9 @@ public class Vehicle extends GridReference {
     //TBC selected collector
     //TBC selected spectrometer
 
-    public Vehicle(Integer x, Integer y, Integer degrees) {
+    public Vehicle(Integer x, Integer y, Compass compass) {
         super(x, y);
-        heading = new Heading(degrees);
+        heading = new Heading(compass);
     }
 
     public void rotateLeft() {
