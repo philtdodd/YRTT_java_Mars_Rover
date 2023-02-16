@@ -49,10 +49,30 @@ class CompassTest {
     }
 
     @Test
-    void testValueOfCompass() {
+    void testValueOfCompassNorth() {
         assertEquals(Compass.NORTH, Compass.valueOfCompass("N"));
         assertEquals(Compass.NORTH, Compass.valueOfCompass("North"));
         assertEquals(Compass.NORTH, Compass.valueOfCompass(0));
     }
 
+    @Test
+    void testValueOfCompassEast() {
+        assertEquals(Compass.EAST, Compass.valueOfCompass("E"));
+        assertEquals(Compass.EAST, Compass.valueOfCompass("East"));
+        assertEquals(Compass.EAST, Compass.valueOfCompass(90));
+    }
+
+    @Test
+    void testValueOfCompassSouth() {
+        assertEquals(Compass.SOUTH, Compass.valueOfCompass("S"));
+        assertEquals(Compass.SOUTH, Compass.valueOfCompass("SoutH"));
+        assertEquals(Compass.SOUTH, Compass.valueOfCompass(180));
+    }
+
+    @Test
+    void testValueOfCompassWest() {
+        assertEquals(Compass.WEST, Compass.valueOfCompass("W"));
+        assertEquals(Compass.WEST, Compass.valueOfCompass("WEST"));
+        assertEquals(Compass.WEST, Compass.valueOfCompass(270));
+    }
 }

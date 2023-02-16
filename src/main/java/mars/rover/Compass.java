@@ -37,7 +37,7 @@ public enum Compass {
         Compass compass = LETTER.get(point);
 
         if (compass == null) {
-            compass = NAME.get(point);
+            compass = NAME.get(point.toLowerCase());
         }
 
         return compass;
