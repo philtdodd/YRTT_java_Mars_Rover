@@ -104,7 +104,7 @@ public class Planet {
             }
         }
 
-        if (receivedCommands == 2) {
+        if (receivedCommands == 2 || receivedCommand.matches("[ ]*([\\d]*)[ ]*([\\d]*)[ ]* [NESW][ ]*")) {
             commandResult = landRoverCommand(receivedCommand);
             if (commandResult.matches("Error command not rover landing command")) {
                 receivedCommands--;
@@ -113,9 +113,7 @@ public class Planet {
                     commandResult = "";
                 }
             }
-        }
-
-        if (receivedCommands > 2)
+        } else if (receivedCommands > 2)
             commandResult = runTimeCommand(receivedCommand);
 
         return commandResult;
