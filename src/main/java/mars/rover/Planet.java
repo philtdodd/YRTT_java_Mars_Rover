@@ -67,23 +67,26 @@ public class Planet {
 
         if (receivedCommands == 1) {
             commandResult = createSurfaceCommand(receivedCommand);
-            if (commandResult.matches("Error command not surface specification"))
+            if (commandResult.matches("Error command not surface specification")) {
                 receivedCommands--;
-
-            if (!verbose) {
-                commandResult = "";
+            } else {
+                if (!verbose) {
+                    commandResult = "";
+                }
             }
         }
 
         if (receivedCommands == 2) {
             commandResult = landRoverCommand(receivedCommand);
-            if (commandResult.matches("Error command not rover landing command"))
+            if (commandResult.matches("Error command not rover landing command")) {
                 receivedCommands--;
-
-            if (!verbose) {
-                commandResult = "";
+            } else {
+                if (!verbose) {
+                    commandResult = "";
+                }
             }
         }
+
 //        if (receivedCommands > 2)
 //            commandResult = runTimeCommand(receivedCommand);
 
