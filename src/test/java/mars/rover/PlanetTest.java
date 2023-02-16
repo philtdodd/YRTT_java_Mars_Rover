@@ -66,4 +66,12 @@ class PlanetTest {
         assertEquals("", mars.receivedCommand(" 123 123"));
         assertEquals("Error command not rover landing command", mars.receivedCommand(" 123 123 "));
     }
+
+    @Test
+    void GetSendValidLandRoverCommand() {
+        Planet mars = new Planet("Mars", 227940000L);
+
+        assertEquals("", mars.receivedCommand(" 3 3"));
+        assertEquals("", mars.receivedCommand(" 0 0 N"));
+    }
 }
