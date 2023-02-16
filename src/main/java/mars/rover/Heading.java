@@ -40,6 +40,10 @@ public class Heading extends GridReference {
         return heading.name;
     }
 
+    public void setHeading(Compass heading) {
+        this.heading = heading;
+    }
+
     public String getHeadingLetter() {
         return heading.letter;
 
