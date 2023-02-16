@@ -7,7 +7,6 @@ import org.junit.jupiter.params.provider.EnumSource;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CompassTest {
-
     @ParameterizedTest
     @EnumSource(value = Compass.class)
     void valueOfCompass(Compass compass) {
@@ -16,31 +15,31 @@ class CompassTest {
         Integer expectedDegrees;
 
         switch (compass) {
-            case NORTH:
+            case NORTH -> {
                 expectedLetter = "N";
                 expectedName = "north";
                 expectedDegrees = 0;
-                break;
-            case EAST:
+            }
+            case EAST -> {
                 expectedLetter = "E";
                 expectedName = "east";
                 expectedDegrees = 90;
-                break;
-            case SOUTH:
+            }
+            case SOUTH -> {
                 expectedLetter = "S";
                 expectedName = "south";
                 expectedDegrees = 180;
-                break;
-            case WEST:
+            }
+            case WEST -> {
                 expectedLetter = "W";
                 expectedName = "west";
                 expectedDegrees = 270;
-                break;
-            default:
+            }
+            default -> {
                 expectedLetter = "ERROR";
                 expectedName = "ERROR";
                 expectedDegrees = -1;
-                break;
+            }
         }
 
         assertEquals(expectedLetter, compass.letter);
