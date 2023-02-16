@@ -52,7 +52,9 @@ public class Planet {
             y = Integer.parseInt(commandSplit[1]);
             heading = commandSplit[2];
 
-            selectedVehicle = new Vehicle(x, y, Compass.valueOf(heading),
+            Compass compassHeading = Compass.valueOfCompass(heading);
+
+            selectedVehicle = new Vehicle(x, y, compassHeading,
                     planetSurface.getXSize(), planetSurface.getYSize());
             return "Rover Landed";
         }
