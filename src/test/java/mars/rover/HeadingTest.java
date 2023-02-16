@@ -62,4 +62,14 @@ class HeadingTest {
 
         assertEquals(Compass.NORTH.degrees, heading.getHeading());
     }
+
+    @Test
+    void testPeekMove00N() {
+        Heading heading = new Heading(0, 0, Compass.NORTH);
+
+        Heading peekedHeading = heading.peekMove(3, 3);
+        assertEquals(0,peekedHeading.getX());
+        assertEquals(1,peekedHeading.getY());
+        assertEquals(Compass.NORTH,peekedHeading.getHeading());
+    }
 }

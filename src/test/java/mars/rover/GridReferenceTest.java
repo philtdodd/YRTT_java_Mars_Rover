@@ -37,13 +37,4 @@ class GridReferenceTest {
 
         assertEquals(1, gridReference.getY());
     }
-
-    @Test
-    void getPeekMove00N() {
-        GridReference gridReference = new GridReference(0, 0);
-        Heading heading = new Heading(Compass.NORTH);
-
-        // assertEquals(new GridReference(0,1), gridReference.peekMove(3,3, heading));
-        assertEquals(Compass.NORTH, heading);
-    }
 }

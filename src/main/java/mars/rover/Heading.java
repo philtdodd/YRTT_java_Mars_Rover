@@ -40,7 +40,7 @@ public class Heading extends GridReference {
         return heading.letter;
 
     }
-        
+
     protected Heading peekMove(Integer xMax, Integer yMax) {
         Integer newX = getX();
         Integer newY = getY();
