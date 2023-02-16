@@ -14,6 +14,20 @@ class HeadingTest {
     }
 
     @Test
+    void getHeadingName() {
+        Heading heading = new Heading(180);
+
+        assertEquals("south", heading.getHeadingName());
+    }
+
+    @Test
+    void getHeadingLetter() {
+        Heading heading = new Heading(270);
+
+        assertEquals("W", heading.getHeadingLetter());
+    }
+
+    @Test
     void rotateLeft() {
         Heading heading = new Heading(90);
 

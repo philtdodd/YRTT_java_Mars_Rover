@@ -29,4 +29,18 @@ public class Heading implements Direction {
         else
             heading = 0;
     }
+
+    public String getHeadingName() {
+        return switch (this.heading) {
+            case 0 -> "north";
+            case 90 -> "east";
+            case 180 -> "south";
+            case 270 -> "west";
+            default -> "Error";
+        };
+    }
+
+    public String getHeadingLetter() {
+        return getHeadingName().toUpperCase().substring(0, 1);
+    }
 }
