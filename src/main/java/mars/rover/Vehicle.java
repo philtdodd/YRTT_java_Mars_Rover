@@ -30,7 +30,7 @@ public class Vehicle extends GridReference {
         heading.rotateRight();
     }
 
-    public Integer getHeading() {
+    public Compass getHeading() {
         return heading.getHeading();
     }
 

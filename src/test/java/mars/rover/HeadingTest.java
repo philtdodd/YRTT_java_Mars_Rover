@@ -33,7 +33,7 @@ class HeadingTest {
 
         heading.rotateLeft();
 
-        assertEquals(Compass.NORTH.degrees, heading.getHeading());
+        assertEquals(Compass.NORTH.degrees, heading.getHeadingDegrees());
     }
 
     @Test
@@ -42,7 +42,7 @@ class HeadingTest {
 
         heading.rotateLeft();
 
-        assertEquals(Compass.WEST.degrees, heading.getHeading());
+        assertEquals(Compass.WEST.degrees, heading.getHeadingDegrees());
     }
 
     @Test
@@ -51,7 +51,7 @@ class HeadingTest {
 
         heading.rotateRight();
 
-        assertEquals(Compass.SOUTH.degrees, heading.getHeading());
+        assertEquals(Compass.SOUTH.degrees, heading.getHeadingDegrees());
     }
 
     @Test
@@ -60,7 +60,7 @@ class HeadingTest {
 
         heading.rotateRight();
 
-        assertEquals(Compass.NORTH.degrees, heading.getHeading());
+        assertEquals(Compass.NORTH.degrees, heading.getHeadingDegrees());
     }
 
     @Test
@@ -71,5 +71,25 @@ class HeadingTest {
         assertEquals(0,peekedHeading.getX());
         assertEquals(1,peekedHeading.getY());
         assertEquals(Compass.NORTH,peekedHeading.getHeading());
+    }
+
+    @Test
+    void testPeekMove00S() {
+        Heading heading = new Heading(0, 0, Compass.SOUTH);
+
+        Heading peekedHeading = heading.peekMove(3, 3);
+        assertEquals(0,peekedHeading.getX());
+        assertEquals(2,peekedHeading.getY());
+        assertEquals(Compass.NORTH,peekedHeading.getHeading());
+    }
+
+    @Test
+    void testPeekMove02S() {
+        Heading heading = new Heading(0, 2, Compass.SOUTH);
+
+        Heading peekedHeading = heading.peekMove(3, 3);
+        assertEquals(0,peekedHeading.getX());
+        assertEquals(1,peekedHeading.getY());
+        assertEquals(Compass.SOUTH,peekedHeading.getHeading());
     }
 }

@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="Refactored the peekMove method and moved to Heading">
+    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="Created peekHeading test">
       <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/Heading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/Heading.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mars/rover/GridReferenceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mars/rover/GridReferenceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/mars/rover/HeadingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mars/rover/HeadingTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +65,7 @@
       <recent name="mars.rover" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HeadingTest.testPeekMove00N">
+  <component name="RunManager" selected="JUnit.HeadingTest">
     <configuration name="CompassTest.testValueOfCompass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="YRTT_Java_Mars_Rover" />
       <extension name="coverage">
@@ -99,22 +98,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GridReferenceTest.getPeekMove00N" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="YRTT_Java_Mars_Rover" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mars.rover.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="mars.rover" />
-      <option name="MAIN_CLASS_NAME" value="mars.rover.GridReferenceTest" />
-      <option name="METHOD_NAME" value="getPeekMove00N" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GridSquareTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="YRTT_Java_Mars_Rover" />
       <extension name="coverage">
@@ -130,7 +113,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GridSquareTest.getPeekMove00N" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HeadingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="YRTT_Java_Mars_Rover" />
       <extension name="coverage">
         <pattern>
@@ -139,9 +122,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="mars.rover" />
-      <option name="MAIN_CLASS_NAME" value="mars.rover.GridSquareTest" />
-      <option name="METHOD_NAME" value="getPeekMove00N" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="mars.rover.HeadingTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -157,6 +139,22 @@
       <option name="PACKAGE_NAME" value="mars.rover" />
       <option name="MAIN_CLASS_NAME" value="mars.rover.HeadingTest" />
       <option name="METHOD_NAME" value="testPeekMove00N" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HeadingTest.testPeekMove02N" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="YRTT_Java_Mars_Rover" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mars.rover.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mars.rover" />
+      <option name="MAIN_CLASS_NAME" value="mars.rover.HeadingTest" />
+      <option name="METHOD_NAME" value="testPeekMove02N" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -178,11 +176,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.HeadingTest" />
+        <item itemvalue="JUnit.HeadingTest.testPeekMove02N" />
         <item itemvalue="JUnit.HeadingTest.testPeekMove00N" />
         <item itemvalue="JUnit.CompassTest.testValueOfCompass" />
         <item itemvalue="JUnit.CompassTest.valueOfCompass" />
-        <item itemvalue="JUnit.GridReferenceTest.getPeekMove00N" />
-        <item itemvalue="JUnit.GridSquareTest.getPeekMove00N" />
       </list>
     </recent_temporary>
   </component>
@@ -307,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676531284946</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Created peekHeading test">
+      <created>1676531764845</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1676531764845</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -342,7 +347,8 @@
     <MESSAGE value="Refactoring Design changes and Tests" />
     <MESSAGE value="Heading Tests refactored and passed" />
     <MESSAGE value="Refactored the peekMove method and moved to Heading" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored the peekMove method and moved to Heading" />
+    <MESSAGE value="Created peekHeading test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created peekHeading test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

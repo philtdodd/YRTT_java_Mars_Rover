@@ -14,7 +14,11 @@ public class Heading extends GridReference {
         this.heading = heading;
     }
 
-    public Integer getHeading() {
+    public Compass getHeading() {
+        return heading;
+    }
+
+    public Integer getHeadingDegrees() {
         return heading.degrees;
     }
 
