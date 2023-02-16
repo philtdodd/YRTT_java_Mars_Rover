@@ -1,7 +1,8 @@
 package mars.rover;
 
-public class Vehicle extends GridReference {
-    private mars.rover.Heading heading;
+public class Vehicle extends Heading {
+    Integer xMax;
+    Integer yMax;
     //TBC transverses a list of SurfaceType
     //TBC Integer climbRate;
     //TBC capabilities a list of Capability
@@ -17,29 +18,10 @@ public class Vehicle extends GridReference {
     //TBC selected collector
     //TBC selected spectrometer
 
-    public Vehicle(Integer x, Integer y, Compass compass) {
-        super(x, y);
-        heading = new Heading(compass);
-    }
-
-    public void rotateLeft() {
-        heading.rotateLeft();
-    }
-
-    public void rotateRight() {
-        heading.rotateRight();
-    }
-
-    public Compass getHeading() {
-        return heading.getHeading();
-    }
-
-    public String getHeadingName() {
-        return heading.getHeadingName();
-    }
-
-    public String getHeadingLetter() {
-        return heading.getHeadingLetter();
+    public Vehicle(Integer x, Integer y, Compass compass, Integer xMax, Integer yMax) {
+        super(x, y, compass);
+        this.xMax = xMax;
+        this.yMax = yMax;
     }
 
     public String getLocation() {
@@ -47,10 +29,16 @@ public class Vehicle extends GridReference {
     }
 
     public Boolean canMove(GridSquare gridSquare) {
-        return true; //TBC
+        return true; //TBC Check climb rate against altitude, check surface against compatible surfaces.
     }
 
-//    public GridReference newReference(Integer xMax, Integer yMax) {
-//        super
-//    }
+    public GridReference move() {
+        Heading newLocation = peekMove(xMax, yMax);
+
+        setX(newLocation.getX());
+        setY(newLocation.getY());
+        setHeading(newLocation.getHeading());
+
+        return newLocation;
+    }
 }

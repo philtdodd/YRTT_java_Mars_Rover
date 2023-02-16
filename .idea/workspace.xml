@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="Created peekHeading test Failing">
+    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="Created peekHeading test All Passed">
+      <change afterPath="$PROJECT_DIR$/src/test/java/mars/rover/VehicleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/Heading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/Heading.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/Vehicle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +67,7 @@
       <recent name="mars.rover" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HeadingTest">
+  <component name="RunManager">
     <configuration name="CompassTest.testValueOfCompass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="YRTT_Java_Mars_Rover" />
       <extension name="coverage">
@@ -318,7 +321,28 @@
       <option name="project" value="LOCAL" />
       <updated>1676532207911</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Created peekHeading test All Passed">
+      <created>1676532559962</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1676532559963</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Created peekHeading test All Passed">
+      <created>1676532573712</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1676532573712</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Created peekHeading test All Passed">
+      <created>1676532585475</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1676532585475</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -355,7 +379,8 @@
     <MESSAGE value="Refactored the peekMove method and moved to Heading" />
     <MESSAGE value="Created peekHeading test" />
     <MESSAGE value="Created peekHeading test Failing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created peekHeading test Failing" />
+    <MESSAGE value="Created peekHeading test All Passed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created peekHeading test All Passed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
