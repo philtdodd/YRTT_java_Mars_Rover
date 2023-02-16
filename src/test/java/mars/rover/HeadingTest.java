@@ -153,6 +153,7 @@ class HeadingTest {
         assertEquals(Compass.EAST,peekedHeading.getHeading());
     }
 
+
     @Test
     void testPeekMove21E() {
         Heading heading = new Heading(2, 1, Compass.EAST);
