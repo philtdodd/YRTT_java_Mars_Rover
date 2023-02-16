@@ -73,5 +73,8 @@ class PlanetTest {
 
         assertEquals("", mars.receivedCommand(" 3 3"));
         assertEquals("", mars.receivedCommand(" 0 0 N"));
+        assertEquals(0, mars.selectedVehicle.getX());
+        assertEquals(0, mars.selectedVehicle.getY());
+        assertEquals(Compass.NORTH, mars.selectedVehicle.getHeading());
     }
 }

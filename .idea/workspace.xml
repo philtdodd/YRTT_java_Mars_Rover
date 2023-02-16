@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="Added message handling to match requirements - PASSED">
+    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="Tests now pass">
+      <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/Planet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/Planet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/mars/rover/PlanetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mars/rover/PlanetTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -388,7 +389,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676535317788</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Added test to land first rover">
+      <created>1676535443803</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1676535443803</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Tests now pass">
+      <created>1676535758628</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1676535758628</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -403,8 +418,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactored the create curface process" />
-    <MESSAGE value="Refactored the create surface process" />
     <MESSAGE value="Rover Land on Surface tested" />
     <MESSAGE value="Added SCapability Enum and failed" />
     <MESSAGE value=" Capability Fixed Code" />
@@ -428,7 +441,9 @@
     <MESSAGE value="Adding Rover to Plasnet Commands and Tests failing" />
     <MESSAGE value="Added message handling to match requirements" />
     <MESSAGE value="Added message handling to match requirements - PASSED" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added message handling to match requirements - PASSED" />
+    <MESSAGE value="Added test to land first rover" />
+    <MESSAGE value="Tests now pass" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tests now pass" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -437,6 +452,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/mars/rover/GridSquareTest.java</url>
           <line>16</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mars/rover/Planet.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

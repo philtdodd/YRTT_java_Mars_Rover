@@ -7,7 +7,7 @@ public class Planet {
 
     private Integer receivedCommands;
 
-    private Vehicle selectedVehicle;
+    public Vehicle selectedVehicle;
     private Boolean verbose;
 
     public Planet(String name, Long distanceFromSun) {
