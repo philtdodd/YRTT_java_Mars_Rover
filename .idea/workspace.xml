@@ -67,7 +67,7 @@
       <recent name="mars.rover" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.VehicleTest.move">
     <configuration name="CompassTest.testValueOfCompass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="YRTT_Java_Mars_Rover" />
       <extension name="coverage">
@@ -79,22 +79,6 @@
       <option name="PACKAGE_NAME" value="mars.rover" />
       <option name="MAIN_CLASS_NAME" value="mars.rover.CompassTest" />
       <option name="METHOD_NAME" value="testValueOfCompass" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CompassTest.valueOfCompass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="YRTT_Java_Mars_Rover" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mars.rover.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="mars.rover" />
-      <option name="MAIN_CLASS_NAME" value="mars.rover.CompassTest" />
-      <option name="METHOD_NAME" value="valueOfCompass(mars.rover.Compass)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -162,6 +146,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="VehicleTest.move" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="YRTT_Java_Mars_Rover" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mars.rover.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mars.rover" />
+      <option name="MAIN_CLASS_NAME" value="mars.rover.VehicleTest" />
+      <option name="METHOD_NAME" value="move" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="mars.rover in YRTT_Jsava_Mars_Rover" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="YRTT_Java_Mars_Rover" />
       <extension name="coverage">
@@ -178,11 +178,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.VehicleTest.move" />
         <item itemvalue="JUnit.HeadingTest" />
         <item itemvalue="JUnit.HeadingTest.testPeekMove02N" />
         <item itemvalue="JUnit.HeadingTest.testPeekMove00N" />
         <item itemvalue="JUnit.CompassTest.testValueOfCompass" />
-        <item itemvalue="JUnit.CompassTest.valueOfCompass" />
       </list>
     </recent_temporary>
   </component>
