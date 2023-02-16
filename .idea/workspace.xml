@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="Added check to vehicle test to confirm vehicle lkocation also updated.">
+    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="Adding Rover to Plasnet Commands and Tests failing">
       <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/Planet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/Planet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mars/rover/PlanetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mars/rover/PlanetTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +64,7 @@
       <recent name="mars.rover" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PlanetTest.GetSendInvalidThenValidSurfaceCommand">
+  <component name="RunManager">
     <configuration name="GridSquareTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="YRTT_Java_Mars_Rover" />
       <extension name="coverage">
@@ -368,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676534285457</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Adding Rover to Plasnet Commands and Tests failing">
+      <created>1676534784530</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1676534784530</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -383,7 +389,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added and Tested to validate the first command to setup the surface" />
     <MESSAGE value="PlanetSurface not created" />
     <MESSAGE value="PlanetSurface  created and checked Tests Passed" />
     <MESSAGE value="Refactored the create curface process" />
@@ -408,7 +413,8 @@
     <MESSAGE value="Refectored Vehical for design changes and added tests" />
     <MESSAGE value="Formetted Code" />
     <MESSAGE value="Added check to vehicle test to confirm vehicle lkocation also updated." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added check to vehicle test to confirm vehicle lkocation also updated." />
+    <MESSAGE value="Adding Rover to Plasnet Commands and Tests failing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding Rover to Plasnet Commands and Tests failing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

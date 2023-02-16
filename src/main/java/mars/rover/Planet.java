@@ -8,11 +8,13 @@ public class Planet {
     private Integer receivedCommands;
 
     private Vehicle selectedVehicle;
+    private Boolean verbose;
 
     public Planet(String name, Long distanceFromSun) {
         this.name = name;
         this.distanceFromSun = distanceFromSun;
         this.receivedCommands = 0;
+        this.verbose = false;
     }
 
     public String getName() {
@@ -63,12 +65,25 @@ public class Planet {
         if (receivedCommand == null || receivedCommand.matches(""))
             return "Error no command";
 
-        if (receivedCommands == 1)
+        if (receivedCommands == 1) {
             commandResult = createSurfaceCommand(receivedCommand);
+            if (commandResult.matches("Error command not surface specification"))
+                receivedCommands--;
 
-        if (receivedCommands == 2)
+            if (!verbose) {
+                commandResult = "";
+            }
+        }
+
+        if (receivedCommands == 2) {
             commandResult = landRoverCommand(receivedCommand);
+            if (commandResult.matches("Error command not rover landing command"))
+                receivedCommands--;
 
+            if (!verbose) {
+                commandResult = "";
+            }
+        }
 //        if (receivedCommands > 2)
 //            commandResult = runTimeCommand(receivedCommand);
 

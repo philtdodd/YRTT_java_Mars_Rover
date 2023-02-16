@@ -45,7 +45,7 @@ class PlanetTest {
         Planet mars = new Planet("Mars", 227940000L);
 
         assertEquals("Error command not surface specification", mars.receivedCommand(" AS "));
-        assertEquals("Surface Initialized", mars.receivedCommand(" 3 3 "));
+        assertEquals("", mars.receivedCommand(" 3 3 "));
         assertEquals(3, mars.planetSurface.getXSize());
         assertEquals(3, mars.planetSurface.getYSize());
     }
@@ -54,7 +54,7 @@ class PlanetTest {
     void GetSendValidSurfaceCommand() {
         Planet mars = new Planet("Mars", 227940000L);
 
-        assertEquals("Surface Initialized", mars.receivedCommand(" 123 123"));
+        assertEquals("", mars.receivedCommand(" 123 123"));
         assertEquals(123, mars.planetSurface.getXSize());
         assertEquals(123, mars.planetSurface.getYSize());
     }
@@ -63,7 +63,7 @@ class PlanetTest {
     void GetSendInvalidLandRoverCommand() {
         Planet mars = new Planet("Mars", 227940000L);
 
-        assertEquals("Surface Initialized", mars.receivedCommand(" 123 123"));
+        assertEquals("", mars.receivedCommand(" 123 123"));
         assertEquals("Error command not rover landing command", mars.receivedCommand(" 123 123 "));
     }
 }
