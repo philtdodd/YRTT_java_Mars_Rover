@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="Expanded fixed multiple landings - plateau does not wrap need to make optional to fix">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/Heading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/Heading.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/Planet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/Planet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/PlanetSurface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/PlanetSurface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mars/rover/HeadingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mars/rover/HeadingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mars/rover/PlanetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mars/rover/PlanetTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mars/rover/VehicleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mars/rover/VehicleTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="Fixed bounds problem for plateau. all basic Requirments working" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -451,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676537529279</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Fixed bounds problem for plateau. all basic Requirments working">
+      <created>1676540039319</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1676540039319</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -466,8 +464,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added  Heasding - failed tests" />
-    <MESSAGE value="Added  Heasding -  tests pass=ed" />
     <MESSAGE value="Added Compase enum Tests Fail" />
     <MESSAGE value="Compass enum Tests Passed" />
     <MESSAGE value="Compass enum Tests Refactor" />
@@ -491,7 +487,9 @@
     <MESSAGE value="First Example Test Passes" />
     <MESSAGE value="Expanded first example to do landing again, and fails" />
     <MESSAGE value="Expanded fixed multiple landings - plateau does not wrap need to make optional to fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Expanded fixed multiple landings - plateau does not wrap need to make optional to fix" />
+    <MESSAGE value="Fixed bounds problem for plateau." />
+    <MESSAGE value="Fixed bounds problem for plateau. all basic Requirments working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bounds problem for plateau. all basic Requirments working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
