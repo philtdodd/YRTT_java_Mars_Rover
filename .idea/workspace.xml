@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="Added Example test - Fails">
-      <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/Planet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/Planet.java" afterDir="false" />
+    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="First Example Test Passes">
+      <change beforePath="$PROJECT_DIR$/src/test/java/mars/rover/PlanetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mars/rover/PlanetTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -416,7 +416,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676536099586</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Added runTime LRM commands">
+      <created>1676536630199</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1676536630199</updated>
+    </task>
+    <task id="LOCAL-00034" summary="First Example Test Passes">
+      <created>1676536676108</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1676536676108</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -431,8 +445,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value=" Capability Fixed Code" />
-    <MESSAGE value=" Capability Fixed Code and refactored" />
     <MESSAGE value="Added  Direction interface" />
     <MESSAGE value="Added  Capability base class" />
     <MESSAGE value="Added  Heasding - failed tests" />
@@ -456,7 +468,9 @@
     <MESSAGE value="Tests now pass" />
     <MESSAGE value="Tests expanded asserts in test passed" />
     <MESSAGE value="Added Example test - Fails" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Example test - Fails" />
+    <MESSAGE value="Added runTime LRM commands" />
+    <MESSAGE value="First Example Test Passes" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Example Test Passes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
