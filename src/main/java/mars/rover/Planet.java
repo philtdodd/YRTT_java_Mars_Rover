@@ -68,7 +68,7 @@ public class Planet {
             String heading;
             String commandTidied = receivedCommand.replaceAll(" ", "");
 
-            for (Integer i; i < commandTidied.length(); i++) {
+            for (Integer i = 0; i < commandTidied.length(); i++) {
                 switch (commandTidied.substring(i, i + 1)) {
                     case "L":
                         selectedVehicle.rotateLeft();
