@@ -33,7 +33,7 @@ class HeadingTest {
 
         heading.rotateLeft();
 
-        assertEquals(Compass.NORTH, heading.getHeading());
+        assertEquals(Compass.NORTH.degrees, heading.getHeading());
     }
 
     @Test
@@ -42,7 +42,7 @@ class HeadingTest {
 
         heading.rotateLeft();
 
-        assertEquals(Compass.WEST, heading.getHeading());
+        assertEquals(Compass.WEST.degrees, heading.getHeading());
     }
 
     @Test
@@ -51,7 +51,7 @@ class HeadingTest {
 
         heading.rotateRight();
 
-        assertEquals(Compass.SOUTH, heading.getHeading());
+        assertEquals(Compass.SOUTH.degrees, heading.getHeading());
     }
 
     @Test
@@ -60,6 +60,6 @@ class HeadingTest {
 
         heading.rotateRight();
 
-        assertEquals(Compass.NORTH, heading.getHeading());
+        assertEquals(Compass.NORTH.degrees, heading.getHeading());
     }
 }
