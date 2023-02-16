@@ -7,6 +7,8 @@ public class Planet {
 
     private Integer receivedCommands;
 
+    private Vehicle selectedVehicle;
+
     public Planet(String name, Long distanceFromSun) {
         this.name = name;
         this.distanceFromSun = distanceFromSun;
@@ -48,7 +50,8 @@ public class Planet {
             y = Integer.parseInt(commandSplit[1]);
             heading = commandSplit[2];
 
-//TBC Rover Init
+            selectedVehicle = new Vehicle(x, y, Compass.valueOf(heading),
+                    planetSurface.getXSize(), planetSurface.getYSize());
             return "Rover Landed";
         }
     }
@@ -65,6 +68,9 @@ public class Planet {
 
         if (receivedCommands == 2)
             commandResult = landRoverCommand(receivedCommand);
+
+//        if (receivedCommands > 2)
+//            commandResult = runTimeCommand(receivedCommand);
 
         return commandResult;
     }
