@@ -20,5 +20,8 @@ class VehicleTest {
 
         assertEquals(1, newLocation.getX());
         assertEquals(2, newLocation.getY());
+        assertEquals(1, vehicle.getX());
+        assertEquals(2, vehicle.getY());
+
     }
 }
