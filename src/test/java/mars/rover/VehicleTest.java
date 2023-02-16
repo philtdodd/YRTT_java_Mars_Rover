@@ -7,14 +7,14 @@ import static org.junit.jupiter.api.Assertions.*;
 class VehicleTest {
     @Test
     void getLocation() {
-        Vehicle vehicle = new Vehicle(1, 1, Compass.NORTH, 3, 3);
+        Vehicle vehicle = new Vehicle(1, 1, Compass.NORTH, 3, 3, true);
 
         assertEquals("1 1 N", vehicle.getLocation());
     }
 
     @Test
     void move() {
-        Vehicle vehicle = new Vehicle(1, 1, Compass.NORTH, 3, 3);
+        Vehicle vehicle = new Vehicle(1, 1, Compass.NORTH, 3, 3, true);
 
         GridReference newLocation = vehicle.move();
 

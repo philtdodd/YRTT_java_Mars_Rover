@@ -67,7 +67,7 @@ class HeadingTest {
     void testPeekMove00N() {
         Heading heading = new Heading(0, 0, Compass.NORTH);
 
-        Heading peekedHeading = heading.peekMove(3, 3);
+        Heading peekedHeading = heading.peekMove(3, 3, true);
         assertEquals(0,peekedHeading.getX());
         assertEquals(1,peekedHeading.getY());
         assertEquals(Compass.NORTH,peekedHeading.getHeading());
@@ -77,7 +77,7 @@ class HeadingTest {
     void testPeekMove02N() {
         Heading heading = new Heading(0, 2, Compass.NORTH);
 
-        Heading peekedHeading = heading.peekMove(3, 3);
+        Heading peekedHeading = heading.peekMove(3, 3, true);
         assertEquals(0,peekedHeading.getX());
         assertEquals(0,peekedHeading.getY());
         assertEquals(Compass.SOUTH,peekedHeading.getHeading());
@@ -87,7 +87,7 @@ class HeadingTest {
     void testPeekMove00S() {
         Heading heading = new Heading(0, 0, Compass.SOUTH);
 
-        Heading peekedHeading = heading.peekMove(3, 3);
+        Heading peekedHeading = heading.peekMove(3, 3, true);
         assertEquals(0,peekedHeading.getX());
         assertEquals(2,peekedHeading.getY());
         assertEquals(Compass.NORTH,peekedHeading.getHeading());
@@ -97,7 +97,7 @@ class HeadingTest {
     void testPeekMove02S() {
         Heading heading = new Heading(0, 2, Compass.SOUTH);
 
-        Heading peekedHeading = heading.peekMove(3, 3);
+        Heading peekedHeading = heading.peekMove(3, 3, true);
         assertEquals(0,peekedHeading.getX());
         assertEquals(1,peekedHeading.getY());
         assertEquals(Compass.SOUTH,peekedHeading.getHeading());
@@ -107,7 +107,7 @@ class HeadingTest {
     void testPeekMove11W() {
         Heading heading = new Heading(1, 1, Compass.WEST);
 
-        Heading peekedHeading = heading.peekMove(3, 3);
+        Heading peekedHeading = heading.peekMove(3, 3, true);
         assertEquals(0,peekedHeading.getX());
         assertEquals(1,peekedHeading.getY());
         assertEquals(Compass.WEST,peekedHeading.getHeading());
@@ -117,7 +117,7 @@ class HeadingTest {
     void testPeekMove01W() {
         Heading heading = new Heading(0, 1, Compass.WEST);
 
-        Heading peekedHeading = heading.peekMove(3, 3);
+        Heading peekedHeading = heading.peekMove(3, 3, true);
         assertEquals(2,peekedHeading.getX());
         assertEquals(1,peekedHeading.getY());
         assertEquals(Compass.WEST,peekedHeading.getHeading());
@@ -127,7 +127,7 @@ class HeadingTest {
     void testPeekMove21W() {
         Heading heading = new Heading(2, 1, Compass.WEST);
 
-        Heading peekedHeading = heading.peekMove(3, 3);
+        Heading peekedHeading = heading.peekMove(3, 3, true);
         assertEquals(1,peekedHeading.getX());
         assertEquals(1,peekedHeading.getY());
         assertEquals(Compass.WEST,peekedHeading.getHeading());
@@ -137,7 +137,7 @@ class HeadingTest {
     void testPeekMove11E() {
         Heading heading = new Heading(1, 1, Compass.EAST);
 
-        Heading peekedHeading = heading.peekMove(3, 3);
+        Heading peekedHeading = heading.peekMove(3, 3, true);
         assertEquals(2,peekedHeading.getX());
         assertEquals(1,peekedHeading.getY());
         assertEquals(Compass.EAST,peekedHeading.getHeading());
@@ -147,7 +147,7 @@ class HeadingTest {
     void testPeekMove01E() {
         Heading heading = new Heading(0, 1, Compass.EAST);
 
-        Heading peekedHeading = heading.peekMove(3, 3);
+        Heading peekedHeading = heading.peekMove(3, 3, true);
         assertEquals(1,peekedHeading.getX());
         assertEquals(1,peekedHeading.getY());
         assertEquals(Compass.EAST,peekedHeading.getHeading());
@@ -157,7 +157,7 @@ class HeadingTest {
     void testPeekMove21E() {
         Heading heading = new Heading(2, 1, Compass.EAST);
 
-        Heading peekedHeading = heading.peekMove(3, 3);
+        Heading peekedHeading = heading.peekMove(3, 3, true);
         assertEquals(0,peekedHeading.getX());
         assertEquals(1,peekedHeading.getY());
         assertEquals(Compass.EAST,peekedHeading.getHeading());

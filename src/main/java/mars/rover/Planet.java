@@ -35,7 +35,7 @@ public class Planet {
             x = Integer.parseInt(commandSplit[0]);
             y = Integer.parseInt(commandSplit[1]);
 
-            this.planetSurface = new PlanetSurface(x, y);
+            this.planetSurface = new PlanetSurface(x, y, false);
             return "Surface Initialized";
         }
     }
@@ -55,7 +55,8 @@ public class Planet {
             Compass compassHeading = Compass.valueOfCompass(heading);
 
             selectedVehicle = new Vehicle(x, y, compassHeading,
-                    planetSurface.getXSize(), planetSurface.getYSize());
+                    planetSurface.getXSize(), planetSurface.getYSize(),
+                    planetSurface.getGlobe());
             return "Rover Landed";
         }
     }

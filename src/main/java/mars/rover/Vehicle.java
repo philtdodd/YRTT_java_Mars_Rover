@@ -3,6 +3,7 @@ package mars.rover;
 public class Vehicle extends Heading {
     Integer xMax;
     Integer yMax;
+    Boolean globe;
     //TBC transverses a list of SurfaceType
     //TBC Integer climbRate;
     //TBC capabilities a list of Capability
@@ -18,10 +19,11 @@ public class Vehicle extends Heading {
     //TBC selected collector
     //TBC selected spectrometer
 
-    public Vehicle(Integer x, Integer y, Compass compass, Integer xMax, Integer yMax) {
+    public Vehicle(Integer x, Integer y, Compass compass, Integer xMax, Integer yMax, Boolean globe) {
         super(x, y, compass);
         this.xMax = xMax;
         this.yMax = yMax;
+        this.globe = globe;
     }
 
     public String getLocation() {
@@ -33,7 +35,7 @@ public class Vehicle extends Heading {
     }
 
     public GridReference move() {
-        Heading newLocation = peekMove(xMax, yMax);
+        Heading newLocation = peekMove(xMax, yMax, globe);
 
         setX(newLocation.getX());
         setY(newLocation.getY());

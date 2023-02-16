@@ -46,8 +46,8 @@ class PlanetTest {
 
         assertEquals("Error command not surface specification", mars.receivedCommand(" AS "));
         assertEquals("", mars.receivedCommand(" 3 3 "));
-        assertEquals(3, mars.planetSurface.getXSize());
-        assertEquals(3, mars.planetSurface.getYSize());
+        assertEquals(4, mars.planetSurface.getXSize());
+        assertEquals(4, mars.planetSurface.getYSize());
     }
 
     @Test
@@ -55,8 +55,8 @@ class PlanetTest {
         Planet mars = new Planet("Mars", 227940000L);
 
         assertEquals("", mars.receivedCommand(" 123 123"));
-        assertEquals(123, mars.planetSurface.getXSize());
-        assertEquals(123, mars.planetSurface.getYSize());
+        assertEquals(124, mars.planetSurface.getXSize());
+        assertEquals(124, mars.planetSurface.getYSize());
     }
 
     @Test
@@ -87,7 +87,7 @@ class PlanetTest {
         assertEquals(1, mars.selectedVehicle.getX());
         assertEquals(3, mars.selectedVehicle.getY());
         assertEquals(Compass.NORTH, mars.selectedVehicle.getHeading());
-        assertEquals("", mars.receivedCommand("3 3 N"));
+        assertEquals("", mars.receivedCommand("3 3 E"));
         assertEquals("5 1 E", mars.receivedCommand("MMRMMRMRRM"));
         assertEquals(5, mars.selectedVehicle.getX());
         assertEquals(1, mars.selectedVehicle.getY());
