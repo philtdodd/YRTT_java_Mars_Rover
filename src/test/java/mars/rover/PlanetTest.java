@@ -77,4 +77,15 @@ class PlanetTest {
         assertEquals(0, mars.selectedVehicle.getY());
         assertEquals(Compass.NORTH, mars.selectedVehicle.getHeading());
     }
+    @Test
+    void GetSendExample1() {
+        Planet mars = new Planet("Mars", 227940000L);
+
+        assertEquals("", mars.receivedCommand("5 5"));
+        assertEquals("", mars.receivedCommand("1 2 N"));
+        assertEquals("1 3 N", mars.receivedCommand("LMLMLMLMM"));
+        assertEquals(1, mars.selectedVehicle.getX());
+        assertEquals(3, mars.selectedVehicle.getY());
+        assertEquals(Compass.NORTH, mars.selectedVehicle.getHeading());
+    }
 }

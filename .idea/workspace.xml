@@ -65,7 +65,7 @@
       <recent name="mars.rover" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PlanetTest.GetSendValidLandRoverCommand">
+  <component name="RunManager" selected="JUnit.PlanetTest.GetSendExample1">
     <configuration name="GridSquareTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="YRTT_Java_Mars_Rover" />
       <extension name="coverage">
@@ -96,7 +96,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HeadingTest.testPeekMove02N" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlanetTest.GetSendExample1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="YRTT_Java_Mars_Rover" />
       <extension name="coverage">
         <pattern>
@@ -105,8 +105,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="mars.rover" />
-      <option name="MAIN_CLASS_NAME" value="mars.rover.HeadingTest" />
-      <option name="METHOD_NAME" value="testPeekMove02N" />
+      <option name="MAIN_CLASS_NAME" value="mars.rover.PlanetTest" />
+      <option name="METHOD_NAME" value="GetSendExample1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -176,11 +176,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PlanetTest.GetSendExample1" />
         <item itemvalue="JUnit.PlanetTest.GetSendValidLandRoverCommand" />
         <item itemvalue="JUnit.PlanetTest.GetSendInvalidThenValidSurfaceCommand" />
         <item itemvalue="JUnit.VehicleTest.move" />
         <item itemvalue="JUnit.HeadingTest" />
-        <item itemvalue="JUnit.HeadingTest.testPeekMove02N" />
       </list>
     </recent_temporary>
   </component>
