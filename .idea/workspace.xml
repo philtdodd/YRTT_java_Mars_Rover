@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="Refactored the create surface process">
-      <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/Planet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/Planet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mars/rover/PlanetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mars/rover/PlanetTest.java" afterDir="false" />
+    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="Rover Land on Surface tested">
+      <change afterPath="$PROJECT_DIR$/src/main/java/mars/rover/CapabilityType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/mars/rover/CapabilityTypeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -61,8 +61,27 @@
       <recent name="mars.rover" />
       <recent name="" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="mars.rover" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.mars.rover in YRTT_Jsava_Mars_Rover">
+  <component name="RunManager" selected="JUnit.CapabilityTypeTest.getCapabilityName">
+    <configuration name="CapabilityTypeTest.getCapabilityName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="YRTT_Java_Mars_Rover" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mars.rover.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mars.rover" />
+      <option name="MAIN_CLASS_NAME" value="mars.rover.CapabilityTypeTest" />
+      <option name="METHOD_NAME" value="getCapabilityName(mars.rover.CapabilityType)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GridSquareTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="YRTT_Java_Mars_Rover" />
       <extension name="coverage">
@@ -142,21 +161,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SurfaceTypeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="YRTT_Java_Mars_Rover" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mars.rover.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="mars.rover" />
-      <option name="MAIN_CLASS_NAME" value="mars.rover.SurfaceTypeTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="mars.rover in YRTT_Jsava_Mars_Rover" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="YRTT_Java_Mars_Rover" />
       <extension name="coverage">
@@ -173,11 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CapabilityTypeTest.getCapabilityName" />
         <item itemvalue="JUnit.PlanetTest.GetSendValidSurfaceCommand" />
         <item itemvalue="JUnit.PlanetTest.GetSendInvalidSurfaceCommand" />
         <item itemvalue="JUnit.PlanetTest.GetSendNullCommand" />
         <item itemvalue="JUnit.GridSquareTest.getSurfaceTypeFullConstructor" />
-        <item itemvalue="JUnit.SurfaceTypeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676504219968</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Rover Land on Surface tested">
+      <created>1676504843031</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676504843031</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -232,7 +243,8 @@
     <MESSAGE value="PlanetSurface  created and checked Tests Passed" />
     <MESSAGE value="Refactored the create curface process" />
     <MESSAGE value="Refactored the create surface process" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored the create surface process" />
+    <MESSAGE value="Rover Land on Surface tested" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rover Land on Surface tested" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
