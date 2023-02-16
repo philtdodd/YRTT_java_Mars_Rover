@@ -62,12 +62,12 @@ public class Heading extends GridReference {
             return (new Heading(getX(), getY(), heading));
 
         if (newX == -1)
-            newX = xMax;
+            newX = xMax - 1;
         else if (newX == xMax)
             newX = 0;
 
         if (newY == -1) {
-            newY = yMax;
+            newY = yMax - 1;
             newHeading = Compass.NORTH;
         } else if (newY == yMax) {
             newY = 0;

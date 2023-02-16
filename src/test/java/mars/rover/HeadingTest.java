@@ -74,6 +74,16 @@ class HeadingTest {
     }
 
     @Test
+    void testPeekMove02N() {
+        Heading heading = new Heading(0, 2, Compass.NORTH);
+
+        Heading peekedHeading = heading.peekMove(3, 3);
+        assertEquals(0,peekedHeading.getX());
+        assertEquals(0,peekedHeading.getY());
+        assertEquals(Compass.SOUTH,peekedHeading.getHeading());
+    }
+
+    @Test
     void testPeekMove00S() {
         Heading heading = new Heading(0, 0, Compass.SOUTH);
 
@@ -91,5 +101,65 @@ class HeadingTest {
         assertEquals(0,peekedHeading.getX());
         assertEquals(1,peekedHeading.getY());
         assertEquals(Compass.SOUTH,peekedHeading.getHeading());
+    }
+
+    @Test
+    void testPeekMove11W() {
+        Heading heading = new Heading(1, 1, Compass.WEST);
+
+        Heading peekedHeading = heading.peekMove(3, 3);
+        assertEquals(0,peekedHeading.getX());
+        assertEquals(1,peekedHeading.getY());
+        assertEquals(Compass.WEST,peekedHeading.getHeading());
+    }
+
+    @Test
+    void testPeekMove01W() {
+        Heading heading = new Heading(0, 1, Compass.WEST);
+
+        Heading peekedHeading = heading.peekMove(3, 3);
+        assertEquals(2,peekedHeading.getX());
+        assertEquals(1,peekedHeading.getY());
+        assertEquals(Compass.WEST,peekedHeading.getHeading());
+    }
+
+    @Test
+    void testPeekMove21W() {
+        Heading heading = new Heading(2, 1, Compass.WEST);
+
+        Heading peekedHeading = heading.peekMove(3, 3);
+        assertEquals(1,peekedHeading.getX());
+        assertEquals(1,peekedHeading.getY());
+        assertEquals(Compass.WEST,peekedHeading.getHeading());
+    }
+
+    @Test
+    void testPeekMove11E() {
+        Heading heading = new Heading(1, 1, Compass.EAST);
+
+        Heading peekedHeading = heading.peekMove(3, 3);
+        assertEquals(2,peekedHeading.getX());
+        assertEquals(1,peekedHeading.getY());
+        assertEquals(Compass.EAST,peekedHeading.getHeading());
+    }
+
+    @Test
+    void testPeekMove01E() {
+        Heading heading = new Heading(0, 1, Compass.EAST);
+
+        Heading peekedHeading = heading.peekMove(3, 3);
+        assertEquals(1,peekedHeading.getX());
+        assertEquals(1,peekedHeading.getY());
+        assertEquals(Compass.EAST,peekedHeading.getHeading());
+    }
+
+    @Test
+    void testPeekMove21E() {
+        Heading heading = new Heading(2, 1, Compass.EAST);
+
+        Heading peekedHeading = heading.peekMove(3, 3);
+        assertEquals(0,peekedHeading.getX());
+        assertEquals(1,peekedHeading.getY());
+        assertEquals(Compass.EAST,peekedHeading.getHeading());
     }
 }
