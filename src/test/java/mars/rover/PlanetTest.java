@@ -23,31 +23,31 @@ class PlanetTest {
     void GetSendEmptyCommand() {
         Planet mars = new Planet("Mars", 227940000L);
 
-        assertEquals("Error no command", mars.receivedCommand(""));
+        assertEquals("ERROR: no command", mars.receivedCommand(""));
     }
 
     @Test
     void GetSendNullCommand() {
         Planet mars = new Planet("Mars", 227940000L);
 
-        assertEquals("Error no command", mars.receivedCommand(null));
+        assertEquals("ERROR: no command", mars.receivedCommand(null));
     }
 
     @Test
     void GetSendInvalidSurfaceCommand() {
         Planet mars = new Planet("Mars", 227940000L);
 
-        assertEquals("Error command not surface specification", mars.receivedCommand(" AS "));
+        assertEquals("ERROR: command not surface specification", mars.receivedCommand(" AS "));
     }
 
     @Test
     void GetSendInvalidThenValidSurfaceCommand() {
         Planet mars = new Planet("Mars", 227940000L);
 
-        assertEquals("Error command not surface specification", mars.receivedCommand(" AS "));
+        assertEquals("ERROR: command not surface specification", mars.receivedCommand(" AS "));
         assertEquals("", mars.receivedCommand(" 3 3 "));
-        assertEquals(4, mars.planetSurface.getXSize());
-        assertEquals(4, mars.planetSurface.getYSize());
+        assertEquals(3, mars.planetSurface.getXSize());
+        assertEquals(3, mars.planetSurface.getYSize());
     }
 
     @Test
@@ -55,8 +55,8 @@ class PlanetTest {
         Planet mars = new Planet("Mars", 227940000L);
 
         assertEquals("", mars.receivedCommand(" 123 123"));
-        assertEquals(124, mars.planetSurface.getXSize());
-        assertEquals(124, mars.planetSurface.getYSize());
+        assertEquals(123, mars.planetSurface.getXSize());
+        assertEquals(123, mars.planetSurface.getYSize());
     }
 
     @Test
@@ -64,7 +64,7 @@ class PlanetTest {
         Planet mars = new Planet("Mars", 227940000L);
 
         assertEquals("", mars.receivedCommand(" 123 123"));
-        assertEquals("Error command not rover landing command", mars.receivedCommand(" 123 123 "));
+        assertEquals("ERROR: command not rover landing command", mars.receivedCommand(" 123 123 "));
     }
 
     @Test

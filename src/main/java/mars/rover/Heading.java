@@ -68,25 +68,25 @@ public class Heading extends GridReference {
         if (globe) {
             if (newX == -1)
                 newX = xMax;
-            else if (newX == xMax)
+            else if (newX == xMax + 1)
                 newX = 0;
 
             if (newY == -1) {
                 newY = yMax;
                 newHeading = Compass.NORTH;
-            } else if (newY == yMax) {
+            } else if (newY == yMax + 1) {
                 newY = 0;
                 newHeading = Compass.SOUTH;
             }
         } else {
             if (newX == -1)
                 newX = 0;
-            else if (newX == xMax +1)
+            else if (newX == xMax + 1)
                 newX = xMax;
 
             if (newY == -1) {
                 newY = 0;
-            } else if (newY == yMax+1) {
+            } else if (newY == yMax + 1) {
                 newY = yMax;
             }
         }

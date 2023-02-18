@@ -67,29 +67,67 @@ public class Planet {
     }
 
     private String displayMap() {
-        String returnResult = "";
-        String mapHeader = "";
+        StringBuilder returnResult = new StringBuilder();
+        String mapHeader = "+---";
 
-        for (Integer x = 0; x <= planetSurface.getXSize(); x++)
-            mapHeader += "+---";
+        mapHeader = mapHeader.repeat(planetSurface.getXSize() + 1);
         mapHeader += "+\n";
 
-        returnResult += mapHeader;
-        for (Integer y = planetSurface.getYSize(); y >= 0; y--) {
-            for (Integer x = 0; x <= planetSurface.getXSize(); x++) {
+        returnResult.append(mapHeader);
+        for (int y = planetSurface.getYSize(); y >= 0; y--) {
+            for (int x = 0; x <= planetSurface.getXSize(); x++) {
                 if (x == selectedVehicle.getX() && y == selectedVehicle.getY()) {
-                    String vehicleDetails = "|R" + selectedVehicle.getId() + "";
-                    for (Integer i = vehicleDetails.length(); i < 4; i++) vehicleDetails += " ";
-                    returnResult += vehicleDetails;
+                    StringBuilder vehicleDetails = new StringBuilder();
+                    vehicleDetails.append("|R");
+                    vehicleDetails.append(selectedVehicle.getId());
+                    vehicleDetails.append(" ".repeat(4 - vehicleDetails.length()));
+                    returnResult.append(vehicleDetails);
                 } else
-                    returnResult += "|   ";
+                    returnResult.append("|   ");
             }
 
-            returnResult += "|\n";
-            returnResult += mapHeader;
+            returnResult.append("|\n");
+            returnResult.append(mapHeader);
         }
 
-        return returnResult;
+        return returnResult.toString();
+    }
+
+    private String displayHelp() {
+        return """
+                 Help:
+                  Initial command string specifies the surface grid.
+                    x y
+                  To land a vehicle enter:
+                    x y h
+                  where h is the heading N E S W, this will return the vehicles ID.
+                  To add a capability:
+                    C capabilityType,name,description,...
+                      DRILL,name,description,minDepth,maxDepth
+                      COLLECTOR,name,description,capacity
+                      SPECTROMETER,name,description,capacity
+                      ARM,name,description
+                      CAMERANIGHTVISION,name,description,minFocalLength,maxFocalLength
+                      CAMERAINFRARED,name,description,minFocalLength,maxFocalLength
+                      CAMERAVISIBLELIGHT,name,description,minFocalLength,maxFocalLength
+                      CAMERABLACKWHITE,name,description,minFocalLength,maxFocalLength
+                  where capabilityType and extra parameters are:
+                  V - Display verbose messages.
+                  D - Display Map.
+                  I - Display Vehicle Info.
+                  R - Turn Right 90 degrees.
+                  L - turn Left 90 Degrees.
+                  M - Move vehicle.
+                  P - Perform Capability.
+                  S - Send Results.
+                  [vehicle ID] - Select vehicle.
+                  [capability ID],... - Select capability and set parameters.
+                      DRILL:depth
+                      COLLECTOR:none
+                      SPECTROMETER:none
+                      ARM:none
+                      CAMERA,ISO,FocalLength,Aperture
+                """;
     }
 
     private String runTimeCommand(String receivedCommand) {
@@ -98,24 +136,18 @@ public class Planet {
         else {
             String heading;
             String commandTidied = receivedCommand.replaceAll(" ", "");
-            Boolean displayMap = false;
+            boolean displayMap = false;
             String returnResult = "";
 
             // Check if Display Map requested.
             if (receivedCommand.contains("D"))
                 displayMap = true;
 
-            for (Integer i = 0; i < commandTidied.length(); i++) {
+            for (int i = 0; i < commandTidied.length(); i++) {
                 switch (commandTidied.substring(i, i + 1)) {
-                    case "L":
-                        selectedVehicle.rotateLeft();
-                        break;
-                    case "R":
-                        selectedVehicle.rotateRight();
-                        break;
-                    case "M":
-                        selectedVehicle.move();
-                        break;
+                    case "L" -> selectedVehicle.rotateLeft();
+                    case "R" -> selectedVehicle.rotateRight();
+                    case "M" -> selectedVehicle.move();
                 }
             }
 
@@ -133,17 +165,20 @@ public class Planet {
         String commandResult = "pass through";
         receivedCommands++;
 
-        // Check for Verbose Response and toggle setting
-        if (receivedCommand.contains("V")) {
-            receivedCommand = receivedCommand.replaceAll("V", "");
-            if (verbose)
-                verbose = false;
-            else
-                verbose = true;
-        }
-
         if (receivedCommand == null || receivedCommand.matches(""))
-            return "ERROR no command";
+            return "ERROR: no command";
+
+        receivedCommand = receivedCommand.trim();
+
+        // Check for help message
+        if (receivedCommand.matches("\\?"))
+            return displayHelp();
+
+        // Check for Verbose Response and toggle setting
+        if (receivedCommand.matches("V")) {
+            receivedCommand = receivedCommand.replaceAll("V", "");
+            verbose = !verbose;
+        }
 
         if (receivedCommands == 1) {
             commandResult = createSurfaceCommand(receivedCommand);
@@ -161,7 +196,7 @@ public class Planet {
             commandResult = runTimeCommand(receivedCommand);
 
         if (!commandResult.contains("ERROR:") && (!verbose && commandResult.contains("VERBOSE: ")))
-            commandResult="";
+            commandResult = "";
         else
             commandResult = commandResult.replace("VERBOSE: ", "");
 
