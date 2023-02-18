@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="README Updated">
+    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="Added Display Map Command D">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/Planet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/Planet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/Vehicle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -467,7 +468,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676540251655</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Added Main to send commands to mars">
+      <created>1676717150978</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1676717150978</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -482,8 +490,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Compass enum Tests Passed" />
-    <MESSAGE value="Compass enum Tests Refactor" />
     <MESSAGE value="Refactoring Design changes and Tests" />
     <MESSAGE value="Heading Tests refactored and passed" />
     <MESSAGE value="Refactored the peekMove method and moved to Heading" />
@@ -507,7 +513,9 @@
     <MESSAGE value="Fixed bounds problem for plateau." />
     <MESSAGE value="Fixed bounds problem for plateau. all basic Requirments working" />
     <MESSAGE value="README Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="README Updated" />
+    <MESSAGE value="Added Main to send commands to mars" />
+    <MESSAGE value="Added Display Map Command D" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Display Map Command D" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -541,11 +549,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/mars/rover/PlanetTest.java</url>
           <line>90</line>
           <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/mars/rover/Planet.java</url>
-          <line>95</line>
-          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -27,26 +27,26 @@ public class Planet {
 
     private String createSurfaceCommand(String receivedCommand) {
         if (!receivedCommand.matches("[ ]*([\\d]*)[ ]*([\\d]*)[ ]*"))
-            return "Error command not surface specification";
+            return "ERROR: command not surface specification";
         else {
             int x, y;
-            String[] commandSplit = receivedCommand.trim().split(" ");
+            String[] commandSplit = receivedCommand.trim().split("\\s+");
 
             x = Integer.parseInt(commandSplit[0]);
             y = Integer.parseInt(commandSplit[1]);
 
             this.planetSurface = new PlanetSurface(x, y, false);
-            return "Surface Initialized";
+            return "VERBOSE: Surface Initialized";
         }
     }
 
     private String landRoverCommand(String receivedCommand) {
         if (!receivedCommand.matches("[ ]*([\\d]*)[ ]*([\\d]*)[ ]* [NESW][ ]*"))
-            return "Error command not rover landing command";
+            return "ERROR: command not rover landing command";
         else {
             int x, y;
             String heading;
-            String[] commandSplit = receivedCommand.trim().split(" ");
+            String[] commandSplit = receivedCommand.trim().split("\\s+");
 
             x = Integer.parseInt(commandSplit[0]);
             y = Integer.parseInt(commandSplit[1]);
@@ -54,20 +54,56 @@ public class Planet {
 
             Compass compassHeading = Compass.valueOfCompass(heading);
 
-            selectedVehicle = new Vehicle(x, y, compassHeading,
-                    planetSurface.getXSize(), planetSurface.getYSize(),
-                    planetSurface.getGlobe());
-            return "Rover Landed";
+            if (x <= planetSurface.getXSize() && y <= planetSurface.getYSize()) {
+                selectedVehicle = new Vehicle(x, y, compassHeading,
+                        planetSurface.getXSize(), planetSurface.getYSize(),
+                        planetSurface.getGlobe(),
+                        1);
+                return "VERBOSE: Rover Landed";
+            } else {
+                return "ERROR: Parameters out of bounds, rover crash landed.";
+            }
         }
     }
 
+    private String displayMap() {
+        String returnResult = "";
+        String mapHeader = "";
+
+        for (Integer x = 0; x <= planetSurface.getXSize(); x++)
+            mapHeader += "+---";
+        mapHeader += "+\n";
+
+        returnResult += mapHeader;
+        for (Integer y = planetSurface.getYSize(); y >= 0; y--) {
+            for (Integer x = 0; x <= planetSurface.getXSize(); x++) {
+                if (x == selectedVehicle.getX() && y == selectedVehicle.getY()) {
+                    String vehicleDetails = "|R" + selectedVehicle.getId() + "";
+                    for (Integer i = vehicleDetails.length(); i < 4; i++) vehicleDetails += " ";
+                    returnResult += vehicleDetails;
+                } else
+                    returnResult += "|   ";
+            }
+
+            returnResult += "|\n";
+            returnResult += mapHeader;
+        }
+
+        return returnResult;
+    }
+
     private String runTimeCommand(String receivedCommand) {
-        if (!receivedCommand.matches("[ ]*(([LRM]*)[ ]*)*[ ]*"))
-            return "Error command not rover landing command";
+        if (!receivedCommand.matches("[ ]*(([LRMD]*)[ ]*)*[ ]*"))
+            return "ERROR: command not rover landing command";
         else {
-            int x, y;
             String heading;
             String commandTidied = receivedCommand.replaceAll(" ", "");
+            Boolean displayMap = false;
+            String returnResult = "";
+
+            // Check if Display Map requested.
+            if (receivedCommand.contains("D"))
+                displayMap = true;
 
             for (Integer i = 0; i < commandTidied.length(); i++) {
                 switch (commandTidied.substring(i, i + 1)) {
@@ -83,7 +119,13 @@ public class Planet {
                 }
             }
 
-            return selectedVehicle.getLocation();
+            // Display Map.
+            if (displayMap)
+                returnResult += displayMap();
+
+            returnResult += selectedVehicle.getLocation();
+
+            return returnResult;
         }
     }
 
@@ -101,30 +143,27 @@ public class Planet {
         }
 
         if (receivedCommand == null || receivedCommand.matches(""))
-            return "Error no command";
+            return "ERROR no command";
 
         if (receivedCommands == 1) {
             commandResult = createSurfaceCommand(receivedCommand);
-            if (commandResult.matches("Error command not surface specification")) {
+            if (commandResult.matches("ERROR: command not surface specification")) {
                 receivedCommands--;
-            } else {
-                if (!verbose) {
-                    commandResult = "";
-                }
             }
         }
 
         if (receivedCommands == 2 || receivedCommand.matches("[ ]*([\\d]*)[ ]*([\\d]*)[ ]* [NESW][ ]*")) {
             commandResult = landRoverCommand(receivedCommand);
-            if (commandResult.matches("Error command not rover landing command")) {
+            if (commandResult.matches("ERROR: command not rover landing command")) {
                 receivedCommands--;
-            } else {
-                if (!verbose) {
-                    commandResult = "";
-                }
             }
         } else if (receivedCommands > 2)
             commandResult = runTimeCommand(receivedCommand);
+
+        if (!commandResult.contains("ERROR:") && (!verbose && commandResult.contains("VERBOSE: ")))
+            commandResult="";
+        else
+            commandResult = commandResult.replace("VERBOSE: ", "");
 
         return commandResult;
     }

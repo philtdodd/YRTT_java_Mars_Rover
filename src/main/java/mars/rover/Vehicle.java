@@ -1,6 +1,7 @@
 package mars.rover;
 
 public class Vehicle extends Heading {
+    Integer id;
     Integer xMax;
     Integer yMax;
     Boolean globe;
@@ -19,15 +20,20 @@ public class Vehicle extends Heading {
     //TBC selected collector
     //TBC selected spectrometer
 
-    public Vehicle(Integer x, Integer y, Compass compass, Integer xMax, Integer yMax, Boolean globe) {
+    public Vehicle(Integer x, Integer y, Compass compass, Integer xMax, Integer yMax, Boolean globe, Integer id) {
         super(x, y, compass);
         this.xMax = xMax;
         this.yMax = yMax;
         this.globe = globe;
+        this.id = id;
     }
 
     public String getLocation() {
         return getX().toString() + " " + getY() + " " + getHeadingLetter();
+    }
+
+    public Integer getId() {
+        return id;
     }
 
     public Boolean canMove(GridSquare gridSquare) {

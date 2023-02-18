@@ -15,8 +15,11 @@ public class Main {
 
             command = inout.nextLine();
 
-            if (!command.matches("Q"))
-                System.out.println(mars.receivedCommand(command));
+            if (!command.matches("Q")) {
+                String result = mars.receivedCommand(command);
+                if (!result.matches(""))
+                    System.out.println(result);
+            }
         } while (!command.contains("Q"));
     }
 }
