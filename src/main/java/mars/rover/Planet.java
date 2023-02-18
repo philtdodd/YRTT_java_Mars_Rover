@@ -7,7 +7,6 @@ public class Planet {
 
     private Integer receivedCommands;
 
-    public Vehicle selectedVehicle;
     private Boolean verbose;
 
     public Planet(String name, Long distanceFromSun) {
@@ -55,11 +54,7 @@ public class Planet {
             Compass compassHeading = Compass.valueOfCompass(heading);
 
             if (x <= planetSurface.getXSize() && y <= planetSurface.getYSize()) {
-                selectedVehicle = new Vehicle(x, y, compassHeading,
-                        planetSurface.getXSize(), planetSurface.getYSize(),
-                        planetSurface.getGlobe(),
-                        1);
-                return "VERBOSE: Rover Landed";
+                return planetSurface.addVehicle(x, y, compassHeading);
             } else {
                 return "ERROR: Parameters out of bounds, rover crash landed.";
             }
@@ -76,10 +71,11 @@ public class Planet {
         returnResult.append(mapHeader);
         for (int y = planetSurface.getYSize(); y >= 0; y--) {
             for (int x = 0; x <= planetSurface.getXSize(); x++) {
-                if (x == selectedVehicle.getX() && y == selectedVehicle.getY()) {
+                Integer id = planetSurface.isOccupied(x, y);
+                if (id != -1) {
                     StringBuilder vehicleDetails = new StringBuilder();
-                    vehicleDetails.append("|R");
-                    vehicleDetails.append(selectedVehicle.getId());
+                    vehicleDetails.append("|V");
+                    vehicleDetails.append(id);
                     vehicleDetails.append(" ".repeat(4 - vehicleDetails.length()));
                     returnResult.append(vehicleDetails);
                 } else
@@ -145,9 +141,9 @@ public class Planet {
 
             for (int i = 0; i < commandTidied.length(); i++) {
                 switch (commandTidied.substring(i, i + 1)) {
-                    case "L" -> selectedVehicle.rotateLeft();
-                    case "R" -> selectedVehicle.rotateRight();
-                    case "M" -> selectedVehicle.move();
+                    case "L" -> planetSurface.selectedVehicle.rotateLeft();
+                    case "R" -> planetSurface.selectedVehicle.rotateRight();
+                    case "M" -> planetSurface.selectedVehicle.move();
                 }
             }
 
@@ -155,7 +151,7 @@ public class Planet {
             if (displayMap)
                 returnResult += displayMap();
 
-            returnResult += selectedVehicle.getLocation();
+            returnResult += planetSurface.selectedVehicle.getLocation();
 
             return returnResult;
         }

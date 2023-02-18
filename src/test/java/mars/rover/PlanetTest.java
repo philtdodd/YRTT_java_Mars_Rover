@@ -73,9 +73,9 @@ class PlanetTest {
 
         assertEquals("", mars.receivedCommand(" 3 3"));
         assertEquals("", mars.receivedCommand(" 0 0 N"));
-        assertEquals(0, mars.selectedVehicle.getX());
-        assertEquals(0, mars.selectedVehicle.getY());
-        assertEquals(Compass.NORTH, mars.selectedVehicle.getHeading());
+        assertEquals(0, mars.planetSurface.selectedVehicle.getX());
+        assertEquals(0, mars.planetSurface.selectedVehicle.getY());
+        assertEquals(Compass.NORTH, mars.planetSurface.selectedVehicle.getHeading());
     }
     @Test
     void GetSendExample1() {
@@ -84,13 +84,13 @@ class PlanetTest {
         assertEquals("", mars.receivedCommand("5 5"));
         assertEquals("", mars.receivedCommand("1 2 N"));
         assertEquals("1 3 N", mars.receivedCommand("LMLMLMLMM"));
-        assertEquals(1, mars.selectedVehicle.getX());
-        assertEquals(3, mars.selectedVehicle.getY());
-        assertEquals(Compass.NORTH, mars.selectedVehicle.getHeading());
+        assertEquals(1, mars.planetSurface.selectedVehicle.getX());
+        assertEquals(3, mars.planetSurface.selectedVehicle.getY());
+        assertEquals(Compass.NORTH, mars.planetSurface.selectedVehicle.getHeading());
         assertEquals("", mars.receivedCommand("3 3 E"));
         assertEquals("5 1 E", mars.receivedCommand("MMRMMRMRRM"));
-        assertEquals(5, mars.selectedVehicle.getX());
-        assertEquals(1, mars.selectedVehicle.getY());
-        assertEquals(Compass.EAST, mars.selectedVehicle.getHeading());
+        assertEquals(5, mars.planetSurface.selectedVehicle.getX());
+        assertEquals(1, mars.planetSurface.selectedVehicle.getY());
+        assertEquals(Compass.EAST, mars.planetSurface.selectedVehicle.getHeading());
     }
 }
