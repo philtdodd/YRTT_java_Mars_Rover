@@ -71,8 +71,10 @@ public class PlanetSurface {
     public String selectVehicle(Integer id) {
         // check new cell is free
         for (Vehicle vehicle : vehicleList)
-            if (vehicle.getId().equals(id))
+            if (vehicle.getId().equals(id)) {
+                selectedVehicle = vehicle;
                 return "Vehicle " + id + " Selected";
+            }
         return "ERROR: Invalid vehicle id.";
     }
 

@@ -127,11 +127,10 @@ public class Planet {
     }
 
     private String runTimeCommand(String receivedCommand) {
-        if (!receivedCommand.matches("[ ]*(([LRMD]*)[ ]*)*[ ]*"))
-            return "ERROR: command not rover landing command";
+        if (!receivedCommand.matches("([MDRL]|[V]\\d{1,2})*"))
+            return "ERROR: command invalid";
         else {
             String heading;
-            String commandTidied = receivedCommand.replaceAll(" ", "");
             boolean displayMap = false;
             String returnResult = "";
 
@@ -139,11 +138,12 @@ public class Planet {
             if (receivedCommand.contains("D"))
                 displayMap = true;
 
-            for (int i = 0; i < commandTidied.length(); i++) {
-                switch (commandTidied.substring(i, i + 1)) {
+            for (int i = 0; i < receivedCommand.length(); i++) {
+                switch (receivedCommand.substring(i, i + 1)) {
                     case "L" -> planetSurface.selectedVehicle.rotateLeft();
                     case "R" -> planetSurface.selectedVehicle.rotateRight();
                     case "M" -> planetSurface.selectedVehicle.move();
+                    case "V" -> planetSurface.selectVehicle(Integer.parseInt(receivedCommand.substring(i+1, i+2)));
                 }
             }
 
@@ -188,8 +188,10 @@ public class Planet {
             if (commandResult.matches("ERROR: command not rover landing command")) {
                 receivedCommands--;
             }
-        } else if (receivedCommands > 2)
-            commandResult = runTimeCommand(receivedCommand);
+        } else if (receivedCommands > 2) {
+            commandResult = runTimeCommand(receivedCommand.replaceAll(" ", ""));
+            receivedCommands++;
+        }
 
         if (!commandResult.contains("ERROR:") && (!verbose && commandResult.contains("VERBOSE: ")))
             commandResult = "";
