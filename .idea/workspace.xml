@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="Fixed bounds problem for plateau. all basic Requirments working" />
+    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="README Updated">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/Planet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/Planet.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,7 +66,7 @@
       <recent name="mars.rover" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PlanetTest.GetSendExample1">
+  <component name="RunManager">
     <configuration name="GridSquareTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="YRTT_Java_Mars_Rover" />
       <extension name="coverage">
@@ -449,7 +453,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676540039319</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="README Updated">
+      <created>1676540237630</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1676540237630</updated>
+    </task>
+    <task id="LOCAL-00039" summary="README Updated">
+      <created>1676540251655</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1676540251655</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -464,7 +482,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added Compase enum Tests Fail" />
     <MESSAGE value="Compass enum Tests Passed" />
     <MESSAGE value="Compass enum Tests Refactor" />
     <MESSAGE value="Refactoring Design changes and Tests" />
@@ -489,7 +506,8 @@
     <MESSAGE value="Expanded fixed multiple landings - plateau does not wrap need to make optional to fix" />
     <MESSAGE value="Fixed bounds problem for plateau." />
     <MESSAGE value="Fixed bounds problem for plateau. all basic Requirments working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bounds problem for plateau. all basic Requirments working" />
+    <MESSAGE value="README Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="README Updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -523,6 +541,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/mars/rover/PlanetTest.java</url>
           <line>90</line>
           <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mars/rover/Planet.java</url>
+          <line>95</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

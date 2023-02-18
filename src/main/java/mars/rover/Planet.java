@@ -91,6 +91,15 @@ public class Planet {
         String commandResult = "pass through";
         receivedCommands++;
 
+        // Check for Verbose Response and toggle setting
+        if (receivedCommand.contains("V")) {
+            receivedCommand = receivedCommand.replaceAll("V", "");
+            if (verbose)
+                verbose = false;
+            else
+                verbose = true;
+        }
+
         if (receivedCommand == null || receivedCommand.matches(""))
             return "Error no command";
 
