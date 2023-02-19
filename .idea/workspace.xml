@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="Refactored thre displayMap and added collision detection">
-      <change afterPath="$PROJECT_DIR$/Mars Rover Class Diagram.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/Planet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/Planet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/PlanetSurface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/PlanetSurface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mars/rover/VehicleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mars/rover/VehicleTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="Refactored thre displayMap and added collision detection" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -506,7 +498,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676733765237</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Refactored thre displayMap and added collision detection">
+      <created>1676793988606</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1676793988606</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -578,7 +577,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/mars/rover/Planet.java</url>
-          <line>157</line>
+          <line>156</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
