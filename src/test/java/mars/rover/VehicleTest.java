@@ -14,14 +14,13 @@ class VehicleTest {
 
     @Test
     void move() {
-        Vehicle vehicle = new Vehicle(1, 1, Compass.NORTH, 3, 3, true, 1);
+        PlanetSurface planetSurface = new PlanetSurface(3, 3, false);
+        planetSurface.addVehicle(3,3,Compass.NORTH);
 
-        GridReference newLocation = vehicle.move();
+        String returnMessage = planetSurface.selectedVehicle.move(planetSurface);
 
-        assertEquals(1, newLocation.getX());
-        assertEquals(2, newLocation.getY());
-        assertEquals(1, vehicle.getX());
-        assertEquals(2, vehicle.getY());
-
+        assertEquals("", returnMessage);
+        assertEquals(1, planetSurface.selectedVehicle.getX());
+        assertEquals(2, planetSurface.selectedVehicle.getY());
     }
 }

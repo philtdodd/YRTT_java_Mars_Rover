@@ -73,9 +73,37 @@ public class PlanetSurface {
         for (Vehicle vehicle : vehicleList)
             if (vehicle.getId().equals(id)) {
                 selectedVehicle = vehicle;
-                return "Vehicle " + id + " Selected";
+                return "Vehicle " + id + " Selected\n";
             }
-        return "ERROR: Invalid vehicle id.";
+        return "ERROR: Invalid vehicle id.\n";
+    }
+
+    public String displayMap() {
+        StringBuilder returnResult = new StringBuilder();
+        String mapHeader = "+---";
+
+        mapHeader = mapHeader.repeat(getXSize() + 1);
+        mapHeader += "+\n";
+
+        returnResult.append(mapHeader);
+        for (int y = getYSize(); y >= 0; y--) {
+            for (int x = 0; x <= getXSize(); x++) {
+                Integer id = isOccupied(x, y);
+                if (id != -1) {
+                    StringBuilder vehicleDetails = new StringBuilder();
+                    vehicleDetails.append("|V");
+                    vehicleDetails.append(id);
+                    vehicleDetails.append(" ".repeat(4 - vehicleDetails.length()));
+                    returnResult.append(vehicleDetails);
+                } else
+                    returnResult.append("|   ");
+            }
+
+            returnResult.append("|\n");
+            returnResult.append(mapHeader);
+        }
+
+        return returnResult.toString();
     }
 
     public Integer isOccupied(Integer x, Integer y) {

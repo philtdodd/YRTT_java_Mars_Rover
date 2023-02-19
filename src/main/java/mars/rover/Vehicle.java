@@ -40,13 +40,17 @@ public class Vehicle extends Heading {
         return true; //TBC Check climb rate against altitude, check surface against compatible surfaces.
     }
 
-    public GridReference move() {
+    public String move(PlanetSurface planetSurface) {
         Heading newLocation = peekMove(xMax, yMax, globe);
+
+        Integer occupied = planetSurface.isOccupied(newLocation.getX(), newLocation.getY());
+        if (occupied != -1)
+            return "ERROR: grid reference occupied\n";
 
         setX(newLocation.getX());
         setY(newLocation.getY());
         setHeading(newLocation.getHeading());
 
-        return newLocation;
+        return "";
     }
 }

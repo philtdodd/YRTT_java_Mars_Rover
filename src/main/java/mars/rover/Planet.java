@@ -61,34 +61,6 @@ public class Planet {
         }
     }
 
-    private String displayMap() {
-        StringBuilder returnResult = new StringBuilder();
-        String mapHeader = "+---";
-
-        mapHeader = mapHeader.repeat(planetSurface.getXSize() + 1);
-        mapHeader += "+\n";
-
-        returnResult.append(mapHeader);
-        for (int y = planetSurface.getYSize(); y >= 0; y--) {
-            for (int x = 0; x <= planetSurface.getXSize(); x++) {
-                Integer id = planetSurface.isOccupied(x, y);
-                if (id != -1) {
-                    StringBuilder vehicleDetails = new StringBuilder();
-                    vehicleDetails.append("|V");
-                    vehicleDetails.append(id);
-                    vehicleDetails.append(" ".repeat(4 - vehicleDetails.length()));
-                    returnResult.append(vehicleDetails);
-                } else
-                    returnResult.append("|   ");
-            }
-
-            returnResult.append("|\n");
-            returnResult.append(mapHeader);
-        }
-
-        return returnResult.toString();
-    }
-
     private String displayHelp() {
         return """
                  Help:
@@ -130,7 +102,6 @@ public class Planet {
         if (!receivedCommand.matches("([MDRL]|[V]\\d{1,2})*"))
             return "ERROR: command invalid";
         else {
-            String heading;
             boolean displayMap = false;
             String returnResult = "";
 
@@ -142,14 +113,14 @@ public class Planet {
                 switch (receivedCommand.substring(i, i + 1)) {
                     case "L" -> planetSurface.selectedVehicle.rotateLeft();
                     case "R" -> planetSurface.selectedVehicle.rotateRight();
-                    case "M" -> planetSurface.selectedVehicle.move();
-                    case "V" -> planetSurface.selectVehicle(Integer.parseInt(receivedCommand.substring(i+1, i+2)));
+                    case "M" -> returnResult = planetSurface.selectedVehicle.move(planetSurface);
+                    case "V" -> returnResult = planetSurface.selectVehicle(Integer.parseInt(receivedCommand.substring(i+1, i+2)));
                 }
             }
 
             // Display Map.
             if (displayMap)
-                returnResult += displayMap();
+                returnResult += planetSurface.displayMap();
 
             returnResult += planetSurface.selectedVehicle.getLocation();
 
@@ -193,6 +164,7 @@ public class Planet {
             receivedCommands++;
         }
 
+        // clear the message if verbose is false and the message does not contain Error
         if (!commandResult.contains("ERROR:") && (!verbose && commandResult.contains("VERBOSE: ")))
             commandResult = "";
         else

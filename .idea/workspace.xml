@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="Added landing multiple rovers">
+    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="Refactored thre displayMap and added collision detection">
+      <change afterPath="$PROJECT_DIR$/Mars Rover Class Diagram.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/Planet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/Planet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/PlanetSurface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/PlanetSurface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mars/rover/VehicleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mars/rover/VehicleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -495,7 +499,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676731927385</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Added Select  vehicle">
+      <created>1676733765237</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1676733765237</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -510,8 +521,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created peekHeading test All Passed" />
-    <MESSAGE value="Refectored Vehical for design changes and added tests" />
     <MESSAGE value="Formetted Code" />
     <MESSAGE value="Added check to vehicle test to confirm vehicle lkocation also updated." />
     <MESSAGE value="Adding Rover to Plasnet Commands and Tests failing" />
@@ -535,7 +544,9 @@
     <MESSAGE value="Double Checked tests for heading and fixed" />
     <MESSAGE value="Refectored code to remnove warnings" />
     <MESSAGE value="Added landing multiple rovers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added landing multiple rovers" />
+    <MESSAGE value="Added Select  vehicle" />
+    <MESSAGE value="Refactored thre displayMap and added collision detection" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored thre displayMap and added collision detection" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -567,12 +578,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/mars/rover/Planet.java</url>
-          <line>153</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/mars/rover/Planet.java</url>
-          <line>185</line>
+          <line>157</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
