@@ -19,7 +19,7 @@ class VehicleTest {
 
         String returnMessage = planetSurface.selectedVehicle.move(planetSurface);
 
-        assertEquals("ERROR: edge of surface", returnMessage);
+        assertEquals("ERROR: edge of surface\n", returnMessage);
         assertEquals(3, planetSurface.selectedVehicle.getX());
         assertEquals(3, planetSurface.selectedVehicle.getY());
     }

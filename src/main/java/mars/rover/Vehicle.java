@@ -46,7 +46,7 @@ public class Vehicle extends Heading {
         try {
             newLocation = peekMove(xMax, yMax, globe);
         } catch (Exception e) {
-            return "ERROR: edge of surface";
+            return "ERROR: edge of surface\n";
         }
 
         Integer occupied = planetSurface.isOccupied(newLocation.getX(), newLocation.getY());

@@ -91,7 +91,7 @@ public class Heading extends GridReference {
             }
         }
 
-        if (heading.equals(newHeading)) {
+        if (getX().equals(newX) && getY().equals(newY)) {
             throw new ArrayIndexOutOfBoundsException("cannot move off surface.");
         }
 
