@@ -90,6 +90,11 @@ public class Heading extends GridReference {
                 newY = yMax;
             }
         }
+
+        if (heading.equals(newHeading)) {
+            throw new ArrayIndexOutOfBoundsException("cannot move off surface.");
+        }
+
         return (new Heading(newX, newY, newHeading));
     }
 }

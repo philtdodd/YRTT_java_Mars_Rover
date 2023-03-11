@@ -13,14 +13,26 @@ class VehicleTest {
     }
 
     @Test
-    void move() {
+    void movePlateau() {
         PlanetSurface planetSurface = new PlanetSurface(3, 3, false);
         planetSurface.addVehicle(3,3,Compass.NORTH);
 
         String returnMessage = planetSurface.selectedVehicle.move(planetSurface);
 
+        assertEquals("ERROR: edge of surface", returnMessage);
+        assertEquals(3, planetSurface.selectedVehicle.getX());
+        assertEquals(3, planetSurface.selectedVehicle.getY());
+    }
+
+    @Test
+    void moveGlobe() {
+        PlanetSurface planetSurface = new PlanetSurface(3, 3, true);
+        planetSurface.addVehicle(3,3,Compass.NORTH);
+
+        String returnMessage = planetSurface.selectedVehicle.move(planetSurface);
+
         assertEquals("", returnMessage);
-        assertEquals(1, planetSurface.selectedVehicle.getX());
-        assertEquals(2, planetSurface.selectedVehicle.getY());
+        assertEquals(3, planetSurface.selectedVehicle.getX());
+        assertEquals(0, planetSurface.selectedVehicle.getY());
     }
 }

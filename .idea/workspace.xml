@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="Refactored thre displayMap and added collision detection" />
+    <list default="true" id="82c547fe-77d0-41a7-bd74-e2aa7fe3b8a9" name="Changes" comment="Workspace Change">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/Heading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/Heading.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mars/rover/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/rover/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mars/rover/PlanetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mars/rover/PlanetTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +49,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/phil/Courses/YRTT-Java/YRTT_java_Mars_Rover&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
 }</component>
@@ -62,7 +68,23 @@
       <recent name="mars.rover" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.rover in YRTT_Java_Mars_Rover">
+    <configuration name="CompassTest.valueOfCompass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="YRTT_Java_Mars_Rover" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mars.rover.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mars.rover" />
+      <option name="MAIN_CLASS_NAME" value="mars.rover.CompassTest" />
+      <option name="METHOD_NAME" value="valueOfCompass(mars.rover.Compass)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GridSquareTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="YRTT_Java_Mars_Rover" />
       <extension name="coverage">
@@ -78,7 +100,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HeadingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlanetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="YRTT_Java_Mars_Rover" />
       <extension name="coverage">
         <pattern>
@@ -87,56 +109,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="mars.rover" />
-      <option name="MAIN_CLASS_NAME" value="mars.rover.HeadingTest" />
+      <option name="MAIN_CLASS_NAME" value="mars.rover.PlanetTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlanetTest.GetSendExample1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="YRTT_Java_Mars_Rover" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mars.rover.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="mars.rover" />
-      <option name="MAIN_CLASS_NAME" value="mars.rover.PlanetTest" />
-      <option name="METHOD_NAME" value="GetSendExample1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlanetTest.GetSendInvalidThenValidSurfaceCommand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="YRTT_Java_Mars_Rover" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mars.rover.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="mars.rover" />
-      <option name="MAIN_CLASS_NAME" value="mars.rover.PlanetTest" />
-      <option name="METHOD_NAME" value="GetSendInvalidThenValidSurfaceCommand" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlanetTest.GetSendValidLandRoverCommand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="YRTT_Java_Mars_Rover" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mars.rover.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="mars.rover" />
-      <option name="MAIN_CLASS_NAME" value="mars.rover.PlanetTest" />
-      <option name="METHOD_NAME" value="GetSendValidLandRoverCommand" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -157,6 +131,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="VehicleTest.moveGlobe" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="YRTT_Java_Mars_Rover" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mars.rover.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mars.rover" />
+      <option name="MAIN_CLASS_NAME" value="mars.rover.VehicleTest" />
+      <option name="METHOD_NAME" value="moveGlobe" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="mars.rover in YRTT_Jsava_Mars_Rover" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="YRTT_Java_Mars_Rover" />
       <extension name="coverage">
@@ -171,13 +161,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="rover in YRTT_Java_Mars_Rover" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="YRTT_Java_Mars_Rover" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/mars/rover" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PlanetTest.GetSendExample1" />
-        <item itemvalue="JUnit.PlanetTest.GetSendInvalidThenValidSurfaceCommand" />
-        <item itemvalue="JUnit.PlanetTest.GetSendValidLandRoverCommand" />
+        <item itemvalue="JUnit.rover in YRTT_Java_Mars_Rover" />
+        <item itemvalue="JUnit.VehicleTest.moveGlobe" />
         <item itemvalue="JUnit.VehicleTest.move" />
-        <item itemvalue="JUnit.HeadingTest" />
+        <item itemvalue="JUnit.PlanetTest" />
+        <item itemvalue="JUnit.CompassTest.valueOfCompass" />
       </list>
     </recent_temporary>
   </component>
@@ -505,7 +503,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676793988606</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Workspace Change">
+      <created>1676794096994</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1676794096994</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -520,7 +525,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Formetted Code" />
     <MESSAGE value="Added check to vehicle test to confirm vehicle lkocation also updated." />
     <MESSAGE value="Adding Rover to Plasnet Commands and Tests failing" />
     <MESSAGE value="Added message handling to match requirements" />
@@ -545,7 +549,8 @@
     <MESSAGE value="Added landing multiple rovers" />
     <MESSAGE value="Added Select  vehicle" />
     <MESSAGE value="Refactored thre displayMap and added collision detection" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored thre displayMap and added collision detection" />
+    <MESSAGE value="Workspace Change" />
+    <option name="LAST_COMMIT_MESSAGE" value="Workspace Change" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -579,6 +584,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/mars/rover/Planet.java</url>
           <line>156</line>
           <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/mars/rover/VehicleTest.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

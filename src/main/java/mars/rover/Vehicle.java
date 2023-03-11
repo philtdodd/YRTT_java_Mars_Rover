@@ -41,7 +41,13 @@ public class Vehicle extends Heading {
     }
 
     public String move(PlanetSurface planetSurface) {
-        Heading newLocation = peekMove(xMax, yMax, globe);
+        Heading newLocation;
+
+        try {
+            newLocation = peekMove(xMax, yMax, globe);
+        } catch (Exception e) {
+            return "ERROR: edge of surface";
+        }
 
         Integer occupied = planetSurface.isOccupied(newLocation.getX(), newLocation.getY());
         if (occupied != -1)

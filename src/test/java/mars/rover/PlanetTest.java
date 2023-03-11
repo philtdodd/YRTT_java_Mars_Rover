@@ -72,7 +72,7 @@ class PlanetTest {
         Planet mars = new Planet("Mars", 227940000L);
 
         assertEquals("", mars.receivedCommand(" 3 3"));
-        assertEquals("", mars.receivedCommand(" 0 0 N"));
+        assertEquals("V1", mars.receivedCommand(" 0 0 N"));
         assertEquals(0, mars.planetSurface.selectedVehicle.getX());
         assertEquals(0, mars.planetSurface.selectedVehicle.getY());
         assertEquals(Compass.NORTH, mars.planetSurface.selectedVehicle.getHeading());
@@ -82,12 +82,12 @@ class PlanetTest {
         Planet mars = new Planet("Mars", 227940000L);
 
         assertEquals("", mars.receivedCommand("5 5"));
-        assertEquals("", mars.receivedCommand("1 2 N"));
+        assertEquals("V1", mars.receivedCommand("1 2 N"));
         assertEquals("1 3 N", mars.receivedCommand("LMLMLMLMM"));
         assertEquals(1, mars.planetSurface.selectedVehicle.getX());
         assertEquals(3, mars.planetSurface.selectedVehicle.getY());
         assertEquals(Compass.NORTH, mars.planetSurface.selectedVehicle.getHeading());
-        assertEquals("", mars.receivedCommand("3 3 E"));
+        assertEquals("V2", mars.receivedCommand("3 3 E"));
         assertEquals("5 1 E", mars.receivedCommand("MMRMMRMRRM"));
         assertEquals(5, mars.planetSurface.selectedVehicle.getX());
         assertEquals(1, mars.planetSurface.selectedVehicle.getY());
